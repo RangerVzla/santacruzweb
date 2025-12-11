@@ -3,6 +3,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import type { LocationMapProps } from "./types";
 
 // Custom orange marker icon using brand color
 const orangeMarkerSvg = `
@@ -18,18 +19,6 @@ const customIcon = new L.Icon({
   iconAnchor: [12, 36],
   popupAnchor: [0, -36],
 });
-
-type Location = {
-  name: string;
-  city: string;
-  address: string;
-  phone: string;
-  coordinates: [number, number];
-};
-
-type LocationMapProps = {
-  locations: Location[];
-};
 
 export default function LocationMap({ locations }: LocationMapProps) {
   // Calculate center point between all locations

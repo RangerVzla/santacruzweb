@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SectionHeading } from "../components/blocks";
+import { SectionHeading } from "../components/SectionHeading";
 
 export default function QuienesSomos() {
   return (
@@ -19,7 +19,7 @@ export default function QuienesSomos() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 pb-20 pt-24 sm:px-12">
           <div className="max-w-3xl space-y-6">
-            <h1 className="text-2xl  leading-tight tracking-[0.08em] text-white uppercase">
+            <h1 className="text-xl sm:text-2xl md:text-3xl leading-tight tracking-[0.08em] text-white uppercase">
               MÁS DE 20 AÑOS A TU LADO
             </h1>
           </div>
@@ -60,7 +60,7 @@ export default function QuienesSomos() {
       {/* Stairs Section */}
       <section className="bg-neutral-100 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-start">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-start">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
               <Image
                 src="/santacruz/stairs.png"
@@ -70,7 +70,7 @@ export default function QuienesSomos() {
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
             </div>
-            <div className="space-y-6 lg:pt-8">
+            <div className="space-y-6 md:pt-8">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
@@ -91,8 +91,8 @@ export default function QuienesSomos() {
       {/* Doctor Section */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-end">
-            <div className="space-y-6 lg:pb-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-end">
+            <div className="space-y-6 md:pb-8">
               <div className="flex items-center gap-2">
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
                 <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
@@ -117,7 +117,7 @@ export default function QuienesSomos() {
       {/* About */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="space-y-6">
               <SectionHeading
                 eyebrow="Nuestra historia"
@@ -139,7 +139,7 @@ export default function QuienesSomos() {
                 }
               />
             </div>
-            <div className="relative h-80 lg:h-96 overflow-hidden rounded-2xl shadow-lg">
+            <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden rounded-2xl shadow-lg">
               <Image
                 src="/santacruz/rectangle-221.jpg"
                 alt="Equipo Santa Cruz"

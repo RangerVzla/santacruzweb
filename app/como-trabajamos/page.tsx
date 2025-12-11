@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionHeading, CTAButton } from "../components/blocks";
+import { SectionHeading } from "../components/SectionHeading";
+import { CTAButton } from "../components/CTAButton";
 
 const steps = [
   {
@@ -40,7 +41,7 @@ export default function ComoTrabajamos() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto flex h-full min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-24 sm:px-12">
           <div className="max-w-4xl">
-            <h1 className="text-2xl  leading-tight tracking-[0.08em] text-white uppercase">
+            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-[0.08em] text-white uppercase">
               EL ÚNICO SISTEMA DE MEDICINA EMPRESARIAL CON IA QUE SE ADAPTA COMPLETAMENTE A TU EMPRESA
             </h1>
           </div>
@@ -60,11 +61,11 @@ export default function ComoTrabajamos() {
               </p>
             }
           />
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="p-8 rounded-xl bg-neutral-50 border border-neutral-200 space-y-4"
+                className="p-6 sm:p-8 rounded-xl bg-neutral-50 border border-neutral-200 space-y-4"
               >
                 <div className="text-4xl font-semibold text-[color:var(--brand-orange)]">
                   {step.number}

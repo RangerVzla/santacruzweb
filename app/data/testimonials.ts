@@ -1,4 +1,6 @@
-export const testimonials = [
+import type { Testimonial } from "../types";
+
+export const testimonials: Testimonial[] = [
   {
     quote:
       "En Fischer valoramos la atención responsable y la predisposición de Clínica Santa Cruz. Su servicio de medicina laboral nos permite acompañar y cuidar la salud de nuestro equipo de forma confiable y oportuna.",

@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionHeading, CTAButton } from "../components/blocks";
+import { SectionHeading } from "../components/SectionHeading";
+import { CTAButton } from "../components/CTAButton";
 
 const services = [
   {
@@ -58,7 +59,7 @@ export default function Servicios() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 pb-20 pt-24 sm:px-12">
           <div className="max-w-3xl space-y-6">
-            <h1 className="text-xl leading-tight tracking-[0.08em] text-white uppercase">
+            <h1 className="text-base sm:text-lg md:text-xl leading-tight tracking-[0.08em] text-white uppercase">
               SERVICIOS MÉDICOS PROFESIONALES FLEXIBLES
             </h1>
             <p className="text-sm sm:text-base tracking-[0.12em] text-white/90">
@@ -87,7 +88,7 @@ export default function Servicios() {
                 key={service.title}
                 className="relative overflow-hidden rounded-xl bg-neutral-100 shadow-md group"
               >
-                <div className="relative h-48">
+                <div className="relative h-40 sm:h-44 md:h-48">
                   <Image
                     src={service.image}
                     alt={service.title}

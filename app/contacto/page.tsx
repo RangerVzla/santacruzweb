@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { useState, FormEvent } from "react";
 
 // Dynamic import for Leaflet (requires window object)
-const LocationMap = dynamic(() => import("../components/LocationMap"), {
+const LocationMap = dynamic(() => import("../components/LocationMap").then(mod => mod.default), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full min-h-[400px] bg-neutral-200 rounded-lg flex items-center justify-center">
@@ -183,7 +183,7 @@ export default function ContactoPage() {
 
 
           <div className="space-y-4 max-w-xl">
-            <h1 className="text-2xl  leading-tight tracking-[0.08em] text-white uppercase">
+            <h1 className="text-xl sm:text-2xl md:text-3xl leading-tight tracking-[0.08em] text-white uppercase">
               ¿Listo para transformar tu medicina laboral?
             </h1>
             <p className="text-sm sm:text-base text-white/90">
@@ -345,7 +345,7 @@ export default function ContactoPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center justify-center px-16 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium transition-colors border-2 border-white text-white hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center px-8 sm:px-12 md:px-16 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium transition-colors border-2 border-white text-white hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Enviando..." : "Enviar"}
               </button>
@@ -363,7 +363,7 @@ export default function ContactoPage() {
       {/* Contact Information Section */}
       <section className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2">
             {/* Left Column - Contact Info */}
             <div className="space-y-12">
               {/* General Contact */}
@@ -410,7 +410,7 @@ export default function ContactoPage() {
             </div>
 
             {/* Right Column - Map */}
-            <div className="w-full h-[400px] lg:h-[500px]">
+            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
               <LocationMap locations={locations} />
             </div>
           </div>

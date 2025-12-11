@@ -1,4 +1,6 @@
-export const clientLogos = [
+import type { Logo } from "../types";
+
+export const clientLogos: Logo[] = [
   { src: "/santacruz/logo-chevron.png", alt: "Chevron" },
   { src: "/santacruz/logo-dls-archer.png", alt: "DLS Archer" },
   { src: "/santacruz/logo-halliburton.png", alt: "Halliburton" },

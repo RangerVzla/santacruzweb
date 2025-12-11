@@ -1,15 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import {
-  ClientLogosGrid,
-  CTAButton,
-  ImageCarousel,
-  ResponsibilityCard,
-  SectionHeading,
-  StatCard,
-  TestimonialCarousel,
-} from "./components/blocks";
+import { ClientLogosGrid } from "./components/ClientLogosGrid";
+import { CTAButton } from "./components/CTAButton";
+import { ImageCarousel } from "./components/ImageCarousel";
+import { ResponsibilityCard } from "./components/ResponsibilityCard";
+import { SectionHeading } from "./components/SectionHeading";
+import { StatCard } from "./components/StatCard";
+import { TestimonialCarousel } from "./components/TestimonialCarousel";
 import { testimonials } from "./data/testimonials";
 
 const stats = [
@@ -117,7 +115,7 @@ export default function Home() {
       {/* Problema / Solución */}
       <section className="bg-neutral-100 py-16">
         <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-8">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] items-center">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-[1.1fr_1fr] items-center">
             <div className="space-y-4">
               <SectionHeading
                 eyebrow="El problema"
@@ -143,8 +141,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] items-center">
-            <div className="relative overflow-hidden rounded-2xl shadow-lg order-2 lg:order-1">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-lg order-2 md:order-1">
               <Image
                 src="/santacruz/rectangle-234.jpg"
                 alt="Profesionales trabajando"
@@ -154,7 +152,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/0" />
             </div>
-            <div className="space-y-4 order-1 lg:order-2">
+            <div className="space-y-4 order-1 md:order-2">
               <SectionHeading
                 eyebrow="La solución"
                 title="Modelos flexibles, tecnología y especialistas"
@@ -188,7 +186,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {benefitCards.map((card) => (
               <div key={card.number} className="relative overflow-hidden rounded-xl bg-neutral-100 shadow-md">
-                <div className="relative h-64">
+                <div className="relative h-48 sm:h-56 md:h-64">
                   <Image
                     src={card.image}
                     alt={card.title}

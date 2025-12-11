@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { SectionHeading, TestimonialCarousel, ClientLogosGrid, SectorCard } from "../components/blocks";
+import { SectionHeading } from "../components/SectionHeading";
+import { TestimonialCarousel } from "../components/TestimonialCarousel";
+import { ClientLogosGrid } from "../components/ClientLogosGrid";
+import { SectorCard } from "../components/SectorCard";
 import { testimonials } from "../data/testimonials";
 
 const sectores = [

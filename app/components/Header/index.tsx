@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { useState } from "react";
-import { MenuDrawer } from "./blocks";
+import { MenuDrawer } from "../MenuDrawer";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
