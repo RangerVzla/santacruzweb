@@ -118,9 +118,10 @@ export default function Home() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1.1fr_1fr] items-center">
             <div className="space-y-4">
               <SectionHeading
-                eyebrow="El problema"
-                title="Las empresas se enfrentan a modelos rígidos y burocráticos"
+                eyebrow=""
+                title="El problema"
                 align="left"
+                showDivider={true}
                 description={
                   <p>
                     El auténtico enemigo en materia de salud es el modelo que usan las empresas que prestan servicios
@@ -129,34 +130,36 @@ export default function Home() {
                 }
               />
             </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
+            <div className="overflow-hidden shadow-lg">
               <Image
-                src="/santacruz/rectangle-242.jpg"
-                alt="Gestión médica"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 600px, 100vw"
+                src="/santacruz/el-problema.png"
+                alt="El problema"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/0" />
             </div>
           </div>
 
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
-            <div className="relative overflow-hidden rounded-2xl shadow-lg order-2 md:order-1">
+            <div className="overflow-hidden shadow-lg order-2 md:order-1">
               <Image
-                src="/santacruz/rectangle-234.jpg"
-                alt="Profesionales trabajando"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 600px, 100vw"
+                src="/santacruz/la-solucion.png"
+                alt="La solución"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/0" />
             </div>
             <div className="space-y-4 order-1 md:order-2">
               <SectionHeading
-                eyebrow="La solución"
-                title="Modelos flexibles, tecnología y especialistas"
+                eyebrow=""
+                title="La solución"
                 align="left"
+                showDivider={true}
+                dividerDotPosition="left"
                 description={
                   <p>
                     Hoy los empresarios han visto las carencias del sistema convencional.
@@ -176,31 +179,37 @@ export default function Home() {
           <SectionHeading
             title="La medicina laboral"
             highlight="que se adapta a ti"
-            description={
-              <p>
-                Adapta tu servicio de cobertura médica laboral y asistencial con herramientas
-                de última generación e IA, reduciendo tiempos y costos.
-              </p>
-            }
+            description=""
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {benefitCards.map((card) => (
-              <div key={card.number} className="relative overflow-hidden rounded-xl bg-neutral-100 shadow-md">
-                <div className="relative h-48 sm:h-56 md:h-64">
+              <div key={card.number} className="flex flex-col">
+                {/* Image */}
+                <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden">
                   <Image
                     src={card.image}
                     alt={card.title}
                     fill
                     className="object-cover"
-                    sizes="400px"
+                    sizes="500px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-black/0" />
                 </div>
-                <div className="relative p-6 space-y-3">
-                  <div className="text-3xl font-semibold text-[color:var(--brand-orange)]">
-                    {card.number}
+
+                {/* Content with vertical divider */}
+                <div className="flex pt-4">
+                  {/* Vertical divider with dot */}
+                  <div className="flex flex-col items-center mr-4">
+                    <div className="w-[2px] flex-1 bg-brand" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-brand -ml-px mt-1" />
                   </div>
-                  <p className="text-sm leading-relaxed text-neutral-700">{card.copy}</p>
+
+                  {/* Text content */}
+                  <div className="flex-1 space-y-3">
+                    <div className="text-4xl font-light text-brand">
+                      {card.number}
+                    </div>
+                    <p className="text-sm leading-relaxed text-neutral-700">{card.copy}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -276,46 +285,78 @@ export default function Home() {
       </section>
 
       {/* Responsabilidad Social */}
-      <section className="relative overflow-hidden py-16">
-        <div className="absolute inset-0">
-          <Image
-            src="/santacruz/rectangle-234.jpg"
-            alt="Fondo tecnológico"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 space-y-12 text-white">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-[0.08em] text-white">
+      <section>
+        {/* White background area - Title and description */}
+        <div className="bg-white py-16 px-4 sm:px-8">
+          <div className="mx-auto max-w-4xl text-center space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-[0.08em] text-black uppercase">
               Responsabilidad Social
             </h2>
-            <p className="text-base leading-relaxed text-white/90 max-w-4xl mx-auto">
-              Santa Cruz O&G reafirma su compromiso de integración con la sociedad y su
-              entorno, contribuyendo activamente al mejoramiento social del país y con total
+            <p className="text-base leading-relaxed text-black/80">
+              <span className="font-semibold">Santa Cruz O&G, reafirma su compromiso de integración tanto con la sociedad como con su entorno</span>,
+              a través de la contribución activa y voluntaria al mejoramiento social del país y con total
               apego al cumplimiento de las leyes nacionales. Este compromiso se materializa
               con especial énfasis en las siguientes áreas:
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
-            <ResponsibilityCard
-              icon="solidarity"
-              title="Solidaridad social"
+        </div>
+
+        {/* Photo background area - Cards */}
+        <div className="px-4 sm:px-8 pb-16">
+          <div className="relative mx-auto max-w-5xl aspect-video">
+            {/* 16:9 Image background */}
+            <Image
+              src="/santacruz/rectangle-234.jpg"
+              alt="Fondo oficina"
+              fill
+              className="object-cover grayscale rounded-lg"
+              sizes="(max-width: 1024px) 100vw, 1024px"
             />
-            <ResponsibilityCard
-              icon="community"
-              title="Iniciativas de apoyo comunal"
-            />
-            <ResponsibilityCard
-              icon="ethics"
-              title="Buenas prácticas de gobierno corporativo: ética y transparencia"
-            />
-            <ResponsibilityCard
-              icon="environment"
-              title="Compromisos de preservación del medio ambiente"
-            />
+            <div className="absolute inset-0 bg-black/40 rounded-lg" />
+
+            {/* Cards overlay centered on image */}
+            <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-8">
+              <div className="relative w-full">
+                {/* Horizontal connecting line with dots between each box */}
+                <div className="absolute left-0 right-0 top-[70px] sm:top-[80px] hidden lg:flex items-center px-[70px] sm:px-[80px]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
+                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
+                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
+                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
+                </div>
+
+                {/* Cards grid */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+                  <div className="flex flex-col items-center relative z-10">
+                    <ResponsibilityCard icon="solidarity" />
+                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
+                      Solidaridad<br />social
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center relative z-10">
+                    <ResponsibilityCard icon="community" />
+                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
+                      Iniciativas de<br />apoyo comunal
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center relative z-10">
+                    <ResponsibilityCard icon="ethics" />
+                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
+                      Buenas prácticas de<br />gobierno corporativo:<br />ética y transparencia
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center relative z-10">
+                    <ResponsibilityCard icon="environment" />
+                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
+                      Compromisos de<br />preservación del<br />medio ambiente
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

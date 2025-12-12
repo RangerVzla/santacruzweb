@@ -8,6 +8,8 @@ export function SectionHeading({
   highlight,
   align = "center",
   description,
+  showDivider = false,
+  dividerDotPosition = "right",
 }: SectionHeadingProps) {
   const base = align === "center" ? "items-center text-center" : "items-start text-left";
   return (
@@ -23,6 +25,12 @@ export function SectionHeading({
           <span className="text-[color:var(--brand-orange)]">{highlight}</span>
         ) : null}
       </h2>
+      {showDivider ? (
+        <div className={`flex items-center gap-2 w-full max-w-md ${dividerDotPosition === "left" ? "flex-row-reverse" : ""}`}>
+          <div className="flex-1 h-[2px] bg-brand" />
+          <div className="w-3 h-3 rounded-full bg-brand" />
+        </div>
+      ) : null}
       {description ? (
         <div className="text-base leading-relaxed text-neutral-700 max-w-3xl">
           {description}

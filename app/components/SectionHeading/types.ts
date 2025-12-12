@@ -6,4 +6,6 @@ export type SectionHeadingProps = {
   highlight?: string;
   align?: "left" | "center";
   description?: ReactNode;
+  showDivider?: boolean;
+  dividerDotPosition?: "left" | "right";
 };
