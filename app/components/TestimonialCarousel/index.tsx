@@ -49,7 +49,7 @@ export function TestimonialCarousel({
       {...swipeHandlers}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative cursor-grab active:cursor-grabbing"
+      className="relative cursor-grab active:cursor-grabbing py-12 px-4 sm:px-8 bg-linear-to-b from-[#4D4D4D]/50 to-[#d4966a]/80"
     >
       {/* Avatar image */}
       {current.image && (
@@ -59,7 +59,7 @@ export function TestimonialCarousel({
             alt={current.author}
             width={94}
             height={94}
-            className="rounded-full border border-white/40 bg-white/10 p-1 transition-opacity duration-500"
+            className="rounded-full border-2 border-neutral-600 transition-opacity duration-500"
           />
         </div>
       )}
@@ -68,41 +68,23 @@ export function TestimonialCarousel({
         <Testimonial quote={current.quote} author={current.author} role={current.role} />
       </div>
 
-      {/* Arrow buttons */}
+      {/* Arrow buttons - centered below content */}
       {testimonials.length > 1 && (
-        <>
+        <div className="flex justify-center items-center gap-6 mt-8">
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 p-2 rounded-full bg-white/80 hover:bg-white shadow-md transition-all duration-200 hover:scale-110"
+            className="p-3 rounded-full border-2 border-white hover:bg-white/10 transition-all duration-200"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-5 h-5 text-neutral-700" />
+            <ChevronLeft className="w-5 h-5 text-white" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 p-2 rounded-full bg-white/80 hover:bg-white shadow-md transition-all duration-200 hover:scale-110"
+            className="p-3 rounded-full border-2 border-white hover:bg-white/10 transition-all duration-200"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-5 h-5 text-neutral-700" />
+            <ChevronRight className="w-5 h-5 text-white" />
           </button>
-        </>
-      )}
-
-      {/* Dot indicators */}
-      {testimonials.length > 1 && (
-        <div className="flex justify-center gap-2 mt-6">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-[color:var(--brand-orange)] scale-125"
-                  : "bg-neutral-400 hover:bg-neutral-500"
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
         </div>
       )}
     </div>

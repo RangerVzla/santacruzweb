@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { ClientLogosGrid } from "../components/ClientLogosGrid";
 import { SectionHeading } from "../components/SectionHeading";
+import { ValueCard } from "../components/ValueCard";
 
 export default function QuienesSomos() {
   return (
@@ -114,112 +116,52 @@ export default function QuienesSomos() {
         </div>
       </section>
 
-      {/* About */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Nuestra historia"
-                title="Santa Cruz O&G"
-                align="left"
-                description={
-                  <div className="space-y-4">
-                    <p>
-                      Desde nuestra fundación, hemos sido pioneros en la
-                      transformación de los servicios de medicina laboral en
-                      Latinoamérica.
-                    </p>
-                    <p>
-                      Nacimos con la misión de ofrecer soluciones ágiles y
-                      personalizadas que se adapten a las necesidades reales de
-                      las empresas del sector energético y más allá.
-                    </p>
-                  </div>
-                }
-              />
-            </div>
-            <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden rounded-2xl shadow-lg">
-              <Image
-                src="/santacruz/rectangle-221.jpg"
-                alt="Equipo Santa Cruz"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 600px, 100vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-black/0" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
+      {/* Value Cards */}
       <section className="bg-neutral-100 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-12">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="p-8 rounded-xl bg-white shadow-md space-y-4">
-              <h3 className="text-sm uppercase tracking-[0.2em] text-[color:var(--brand-orange)]">
-                Misión
-              </h3>
-              <p className="text-lg leading-relaxed text-neutral-800">
-                Brindar servicios de medicina laboral eficientes, flexibles y de
-                alta calidad, utilizando tecnología de vanguardia para mejorar
-                la salud y bienestar de los trabajadores.
-              </p>
-            </div>
-            <div className="p-8 rounded-xl bg-white shadow-md space-y-4">
-              <h3 className="text-sm uppercase tracking-[0.2em] text-[color:var(--brand-orange)]">
-                Visión
-              </h3>
-              <p className="text-lg leading-relaxed text-neutral-800">
-                Ser el referente latinoamericano en servicios de salud laboral,
-                reconocidos por nuestra innovación, compromiso y excelencia en
-                la atención.
-              </p>
-            </div>
+        <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
+          <SectionHeading title="Nuestros" highlight="valores" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <ValueCard
+              icon="efficiency"
+              title="Eficiencia"
+              description="Maximizamos recursos y minimizamos errores"
+            />
+            <ValueCard
+              icon="transparency"
+              title="Transparencia"
+              description="Comunicación abierta y clara con información honesta"
+            />
+            <ValueCard
+              icon="flexibility"
+              title="Flexibilidad"
+              description="Nos adaptamos a las necesidades específicas de cada cliente"
+            />
+            <ValueCard
+              icon="innovation"
+              title="Innovación"
+              description="Inversión constante en nuevas tecnologías y procesos"
+            />
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl font-semibold text-[color:var(--brand-orange)]">
-                +20
-              </div>
-              <p className="text-sm uppercase tracking-[0.16em] text-neutral-600">
-                Años de experiencia
+      {/* Client Logos */}
+      <section className="bg-neutral-50 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
+          <SectionHeading
+            title="Nuestros mejores clientes"
+            highlight="nos avalan"
+            description={
+              <p>
+                Aliados en distintos países confían en nuestra capacidad de respuesta y
+                flexibilidad operacional.
               </p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-semibold text-[color:var(--brand-orange)]">
-                +15
-              </div>
-              <p className="text-sm uppercase tracking-[0.16em] text-neutral-600">
-                Países con cobertura
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-semibold text-[color:var(--brand-orange)]">
-                +500
-              </div>
-              <p className="text-sm uppercase tracking-[0.16em] text-neutral-600">
-                Empresas atendidas
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-semibold text-[color:var(--brand-orange)]">
-                99.8%
-              </div>
-              <p className="text-sm uppercase tracking-[0.16em] text-neutral-600">
-                Satisfacción del cliente
-              </p>
-            </div>
-          </div>
+            }
+          />
+          <ClientLogosGrid />
         </div>
       </section>
+
     </main>
   );
 }

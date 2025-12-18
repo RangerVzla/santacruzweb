@@ -25,6 +25,7 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
     { label: "CÓMO TRABAJAMOS", href: "/como-trabajamos" },
     { label: "QUIENES SOMOS", href: "/quienes-somos" },
     { label: "SERVICIOS", href: "/servicios" },
+    { label: "SERVICIOS INTERIOR", href: "/servicios-interior" },
     { label: "TESTIMONIOS", href: "/testimonios" },
     { label: "CONTACTO", href: "/contacto" },
   ];
