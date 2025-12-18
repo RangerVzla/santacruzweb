@@ -215,7 +215,7 @@ export default function ContactoPage() {
             Formulario de Contacto
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             {/* Honeypot field - hidden from users, catches bots */}
             <input
               type="text"
@@ -230,7 +230,7 @@ export default function ContactoPage() {
 
             {/* Nombre Completo */}
             <div>
-              <label className="block text-white text-sm uppercase tracking-[0.1em] mb-1">
+              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
                 Nombre Completo
               </label>
               <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function ContactoPage() {
 
             {/* Empresa */}
             <div>
-              <label className="block text-white text-sm uppercase tracking-[0.1em] mb-1">
+              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
                 Empresa
               </label>
               <div className="flex items-center gap-2">
@@ -264,7 +264,7 @@ export default function ContactoPage() {
 
             {/* Cargo */}
             <div>
-              <label className="block text-white text-sm uppercase tracking-[0.1em] mb-1">
+              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
                 Cargo
               </label>
               <div className="flex items-center gap-2">
@@ -281,7 +281,7 @@ export default function ContactoPage() {
 
             {/* Teléfono */}
             <div>
-              <label className="block text-white text-sm uppercase tracking-[0.1em] mb-1">
+              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
                 Teléfono
               </label>
               <div className="flex items-center gap-2">
@@ -298,7 +298,7 @@ export default function ContactoPage() {
 
             {/* Email */}
             <div>
-              <label className="block text-white text-sm uppercase tracking-[0.1em] mb-1">
+              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
                 Email
               </label>
               <div className="flex items-center gap-2">
@@ -332,7 +332,7 @@ export default function ContactoPage() {
                 id="consentimiento"
                 checked={formData.consentimiento}
                 onChange={(e) => handleChange("consentimiento", e.target.checked)}
-                className="mt-1 w-4 h-4 accent-[color:var(--brand-orange)]"
+                className="mt-0.5 w-6 h-6 accent-brand cursor-pointer"
               />
               <label htmlFor="consentimiento" className="text-white/90 text-sm">
                 Doy mi consentimiento a la política de gestión de datos de SantaCruzO&G
@@ -410,7 +410,7 @@ export default function ContactoPage() {
             </div>
 
             {/* Right Column - Map */}
-            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
+            <div className="w-full h-[350px] sm:h-[400px] md:h-[500px]">
               <LocationMap locations={locations} />
             </div>
           </div>

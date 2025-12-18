@@ -303,7 +303,7 @@ export default function Home() {
 
         {/* Photo background area - Cards */}
         <div className="px-4 sm:px-8 pb-16">
-          <div className="relative mx-auto max-w-5xl aspect-video">
+          <div className="relative mx-auto max-w-5xl min-h-[500px] sm:min-h-[400px] md:aspect-video md:min-h-0">
             {/* 16:9 Image background */}
             <Image
               src="/santacruz/rectangle-234.jpg"
@@ -329,29 +329,29 @@ export default function Home() {
                 </div>
 
                 {/* Cards grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
                   <div className="flex flex-col items-center relative z-10">
                     <ResponsibilityCard icon="solidarity" />
-                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
-                      Solidaridad<br />social
+                    <p className="mt-2 sm:mt-4 text-[9px] sm:text-[10px] md:text-sm uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white text-center font-medium leading-relaxed">
+                      Solidaridad social
                     </p>
                   </div>
                   <div className="flex flex-col items-center relative z-10">
                     <ResponsibilityCard icon="community" />
-                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
-                      Iniciativas de<br />apoyo comunal
+                    <p className="mt-2 sm:mt-4 text-[9px] sm:text-[10px] md:text-sm uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white text-center font-medium leading-relaxed">
+                      Iniciativas de apoyo comunal
                     </p>
                   </div>
                   <div className="flex flex-col items-center relative z-10">
                     <ResponsibilityCard icon="ethics" />
-                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
-                      Buenas prácticas de<br />gobierno corporativo:<br />ética y transparencia
+                    <p className="mt-2 sm:mt-4 text-[9px] sm:text-[10px] md:text-sm uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white text-center font-medium leading-relaxed">
+                      Buenas prácticas de gobierno corporativo: ética y transparencia
                     </p>
                   </div>
                   <div className="flex flex-col items-center relative z-10">
                     <ResponsibilityCard icon="environment" />
-                    <p className="mt-4 text-xs sm:text-sm uppercase tracking-[0.12em] text-white text-center font-medium">
-                      Compromisos de<br />preservación del<br />medio ambiente
+                    <p className="mt-2 sm:mt-4 text-[9px] sm:text-[10px] md:text-sm uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white text-center font-medium leading-relaxed">
+                      Compromisos de preservación del medio ambiente
                     </p>
                   </div>
                 </div>

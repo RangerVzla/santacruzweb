@@ -133,14 +133,14 @@ export default function Servicios() {
               </div>
               <div className="h-[2px] w-full bg-brand" />
               <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Telemedicina</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Irisoscopio</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Ecógrafo</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Otoscopio</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Cámara de inspección</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Estetoscopio digital</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">Dermatoscopio</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-neutral-800">E.C.G y otros</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Telemedicina</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Irisoscopio</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Ecógrafo</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Otoscopio</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Cámara de inspección</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Estetoscopio digital</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Dermatoscopio</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">E.C.G y otros</p>
               </div>
               <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
                 Más información

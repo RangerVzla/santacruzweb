@@ -112,7 +112,7 @@ export default function ComoTrabajamos() {
       </section>
 
       {/* Feature Card 01 */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
@@ -133,7 +133,7 @@ export default function ComoTrabajamos() {
             </div>
             {/* Right - Image with Number */}
             <div className="relative">
-              <span className="absolute -top-8 -left-8 text-[10rem] font-light text-brand leading-none z-20">
+              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
                 01
               </span>
               <Image
@@ -188,7 +188,7 @@ export default function ComoTrabajamos() {
       </section>
 
       {/* Feature Card 03 */}
-      <section className="bg-neutral-100 py-16">
+      <section className="bg-neutral-100 py-16 overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
@@ -209,7 +209,7 @@ export default function ComoTrabajamos() {
             </div>
             {/* Right - Image with Number */}
             <div className="relative">
-              <span className="absolute -top-8 -left-8 text-[10rem] font-light text-brand leading-none z-20">
+              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
                 03
               </span>
               <Image
@@ -264,7 +264,7 @@ export default function ComoTrabajamos() {
       </section>
 
       {/* Feature Card 05 */}
-      <section className="bg-neutral-100 py-16">
+      <section className="bg-neutral-100 py-16 overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
@@ -285,7 +285,7 @@ export default function ComoTrabajamos() {
             </div>
             {/* Right - Image with Number */}
             <div className="relative">
-              <span className="absolute -top-8 -left-8 text-[10rem] font-light text-brand leading-none z-20">
+              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
                 05
               </span>
               <Image
@@ -312,18 +312,18 @@ export default function ComoTrabajamos() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-5xl px-4 sm:px-8">
-          <div className="relative overflow-hidden">
+        <div className="mx-auto max-w-5xl px-0 sm:px-8">
+          <div className="relative overflow-hidden min-h-[400px] sm:min-h-0">
             <Image
               src="/santacruz/empieza-1.png"
               alt="Empieza a aplicar la medicina laboral flexible"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="w-full h-full object-cover sm:h-auto sm:object-contain absolute inset-0 sm:relative"
             />
             <div
-              className="absolute inset-y-0 left-0 w-full md:w-1/2 flex flex-col justify-center px-8 sm:px-12 lg:px-16"
+              className="relative sm:absolute inset-y-0 left-0 w-full md:w-1/2 flex flex-col justify-center px-6 py-8 sm:px-12 lg:px-16 min-h-[400px] sm:min-h-0"
               style={{
                 background: "linear-gradient(to bottom, rgba(77, 77, 77, 0.6), rgba(223, 86, 0, 0.6))",
               }}
@@ -334,7 +334,7 @@ export default function ComoTrabajamos() {
               </p>
               <Link
                 href="/contacto"
-                className="mt-8 inline-block w-fit border border-white text-white px-8 py-3 uppercase tracking-[0.15em] text-sm hover:bg-white hover:text-black transition-colors"
+                className="mt-6 sm:mt-8 inline-block w-fit border border-white text-white px-6 sm:px-8 py-3 uppercase tracking-[0.15em] text-sm hover:bg-white hover:text-black transition-colors"
               >
                 SOLICITAR ASESORAMIENTO
               </Link>
@@ -347,10 +347,11 @@ export default function ComoTrabajamos() {
       <section className="bg-neutral-100 py-16 overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left - Overlapping Images Grid */}
-            <div className="relative h-[500px] md:h-[600px]">
-              {/* Image 1 - Top left */}
-              <div className="absolute top-0 -left-8 md:-left-16 w-[65%] z-10 shadow-lg">
+            {/* Left - Images Grid */}
+            {/* Mobile: Simple 2-column grid, Desktop: Overlapping layout */}
+            <div className="grid grid-cols-2 gap-4 md:relative md:h-[600px] md:block">
+              {/* Image 1 */}
+              <div className="shadow-lg md:absolute md:top-0 md:-left-16 md:w-[65%] md:z-10">
                 <Image
                   src="/santacruz/grid-1.png"
                   alt="Instalaciones Santa Cruz - Administración"
@@ -360,8 +361,8 @@ export default function ComoTrabajamos() {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Image 2 - Center right */}
-              <div className="absolute top-[20%] right-0 w-[70%] z-20 shadow-lg">
+              {/* Image 2 */}
+              <div className="shadow-lg md:absolute md:top-[20%] md:right-0 md:w-[70%] md:z-20">
                 <Image
                   src="/santacruz/grid-2.png"
                   alt="Instalaciones Santa Cruz - Rayos X"
@@ -371,8 +372,8 @@ export default function ComoTrabajamos() {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Image 3 - Bottom left */}
-              <div className="absolute bottom-0 -left-8 md:-left-16 w-[60%] z-10 shadow-lg">
+              {/* Image 3 */}
+              <div className="shadow-lg col-span-2 md:absolute md:bottom-0 md:-left-16 md:w-[60%] md:z-10">
                 <Image
                   src="/santacruz/grid-3.png"
                   alt="Instalaciones Santa Cruz - Recepción"
