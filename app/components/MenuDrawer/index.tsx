@@ -21,6 +21,16 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
 
   if (!shouldRender) return null;
 
+
+const TO = "rrhh@santacruzoyg.com.ar";
+const SUBJECT = encodeURIComponent("Postulación – Sitio web");
+const BODY = encodeURIComponent(
+  "Hola equipo de RRHH,\n\n" +
+  "Me gustaría postularme para trabajar con ustedes.\n" +
+  "Adjunto mi CV.\n\n" +
+  "Saludos,"
+);
+
   const menuItems = [
     { label: "CÓMO TRABAJAMOS", href: "/como-trabajamos" },
     { label: "QUIENES SOMOS", href: "/quienes-somos" },
@@ -28,7 +38,10 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
     { label: "SERVICIOS INTERIOR", href: "/servicios-interior" },
     { label: "TESTIMONIOS", href: "/testimonios" },
     { label: "CONTACTO", href: "/contacto" },
-  ];
+    { label: "POSTÚLATE", href: `mailto:${TO}?subject=${SUBJECT}&body=${BODY}` },
+    { label: "CLIENTES", href: "https://clientes.santacruzoyg.com.ar/" }
+
+ ];
 
   return (
     <>
