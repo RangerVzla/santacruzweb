@@ -58,6 +58,24 @@ export function Footer() {
           <Link href="/contacto" className="hover:text-white transition-colors">
             Contacto
           </Link>
+          
+<a
+  href={
+    "mailto:rrhh@santacruzoyg.com.ar"
+    + "?subject=" + encodeURIComponent("Postulación – Sitio web")
+    + "&body=" + encodeURIComponent(
+        "Hola equipo de RRHH,\n\nMe gustaría postularme para trabajar con ustedes.\nAdjunto mi CV.\n\nSaludos,"
+      )
+  }
+  className="hover:opacity-80"
+>
+  Trabaja con nosotros
+</a>
+	
+	 <Link href="https://clientes.santacruzoyg.com.ar/" className="hover:text-white transition-colors">
+            Acceso a clientes
+          </Link>
+
         </nav>
 
         {/* Row 4: H2 Title */}
