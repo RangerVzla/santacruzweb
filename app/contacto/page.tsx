@@ -22,7 +22,6 @@ type FormData = {
   email: string;
   mensaje: string;
   consentimiento: boolean;
-  website: string; // Honeypot field - should remain empty
 };
 
 type FormErrors = {
@@ -69,11 +68,8 @@ export default function ContactoPage() {
     email: "",
     mensaje: "",
     consentimiento: false,
-    website: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -112,51 +108,17 @@ export default function ContactoPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
+    const subject = encodeURIComponent(`Contacto: ${formData.nombreCompleto} - ${formData.empresa}`);
+    const body = encodeURIComponent(
+      `Nombre: ${formData.nombreCompleto}\nEmpresa: ${formData.empresa}\nCargo: ${formData.cargo}\nTeléfono: ${formData.telefono}\nEmail: ${formData.email}\n\nMensaje:\n${formData.mensaje}`
+    );
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nombreCompleto: formData.nombreCompleto,
-          empresa: formData.empresa,
-          cargo: formData.cargo,
-          telefono: formData.telefono,
-          email: formData.email,
-          mensaje: formData.mensaje,
-          website: formData.website,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || "Error al enviar el mensaje");
-      }
-
-      setSubmitStatus("success");
-      setFormData({
-        nombreCompleto: "",
-        empresa: "",
-        cargo: "",
-        telefono: "",
-        email: "",
-        mensaje: "",
-        consentimiento: false,
-        website: "",
-      });
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:admin@santacruzoyg.com.ar?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (field: keyof FormData, value: string | boolean) => {
@@ -216,18 +178,6 @@ export default function ContactoPage() {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-            {/* Honeypot field - hidden from users, catches bots */}
-            <input
-              type="text"
-              name="website"
-              value={formData.website}
-              onChange={(e) => handleChange("website", e.target.value)}
-              className="absolute -left-[9999px] opacity-0 pointer-events-none"
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-            />
-
             {/* Nombre Completo */}
             <div>
               <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
@@ -344,17 +294,10 @@ export default function ContactoPage() {
             <div className="flex flex-col items-center gap-4 pt-4">
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="inline-flex items-center justify-center px-8 sm:px-12 md:px-16 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium transition-colors border-2 border-white text-white hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center px-8 sm:px-12 md:px-16 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium transition-colors border-2 border-white text-white hover:bg-white hover:text-black"
               >
-                {isSubmitting ? "Enviando..." : "Enviar"}
+                Enviar
               </button>
-              {submitStatus === "success" && (
-                <p className="text-green-400 text-sm">¡Mensaje enviado con éxito!</p>
-              )}
-              {submitStatus === "error" && (
-                <p className="text-red-400 text-sm">Error al enviar el mensaje. Intenta de nuevo.</p>
-              )}
             </div>
           </form>
         </div>
