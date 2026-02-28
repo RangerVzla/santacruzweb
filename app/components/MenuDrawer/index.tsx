@@ -1,25 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { X, Instagram, Linkedin } from "lucide-react";
 import type { MenuDrawerProps } from "./types";
 
 export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
-  const [shouldRender, setShouldRender] = useState(isOpen);
-
   useEffect(() => {
-    if (isOpen) {
-      setShouldRender(true);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-      const timer = setTimeout(() => setShouldRender(false), 300);
-      return () => clearTimeout(timer);
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
-
-  if (!shouldRender) return null;
 
   const menuItems = [
     { label: "CÓMO TRABAJAMOS", href: "/como-trabajamos" },
@@ -35,7 +27,7 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
       {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
       />
@@ -43,7 +35,7 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
       {/* Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white/10 backdrop-blur-xl border-l border-white/20 z-50 shadow-2xl transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
         }`}
       >
         <div className="flex flex-col h-full">

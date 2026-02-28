@@ -39,27 +39,6 @@ const benefitCards = [
   },
 ];
 
-const featureCards = [
-  {
-    title: "Protocolos ágiles",
-    copy: "Simplificamos la burocracia con circuitos claros, trazables y sin fricción para tus equipos.",
-    image: "/santacruz/rectangle-223.jpg",
-    dark: true,
-  },
-  {
-    title: "Consultas remotas y presenciales",
-    copy: "Coordinamos atenciones en sitio y telemedicina con profesionales especialistas.",
-    image: "/santacruz/rectangle-226.jpg",
-    dark: false,
-  },
-  {
-    title: "Gestión y soporte 24/7",
-    copy: "Respuesta rápida y acompañamiento continuo para incidentes y necesidades médicas.",
-    image: "/santacruz/rectangle-227.jpg",
-    dark: false,
-  },
-];
-
 const carouselImages = [
   { src: "/santacruz/rectangle-243.jpg", alt: "Consulta médica" },
   { src: "/santacruz/rectangle-226.jpg", alt: "Atención médica" },
