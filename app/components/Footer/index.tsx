@@ -16,7 +16,7 @@ export function Footer() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/70 to-black/90" />
       </div>
 
       {/* Main Content */}
@@ -31,64 +31,74 @@ export function Footer() {
             className="h-auto w-[180px] sm:w-[220px]"
           />
           <p className="text-xs leading-relaxed text-white/80 md:max-w-md md:text-right">
-            SANTA CRUZ O&G es una marca nueva registrada por el Ministerio de Desarrollo
-            Productivo de la República Argentina con el nº de registro: 3 632 625
+            SANTA CRUZ O&G es una marca nueva registrada por el Ministerio de
+            Desarrollo Productivo de la República Argentina con el nº de
+            registro: 3 632 625
           </p>
         </div>
 
         {/* Row 2: Orange Horizontal Line */}
         <div className="flex items-center gap-2">
-          <div className="flex-1 h-[1px] bg-white" />
+          <div className="flex-1 h-px bg-white" />
         </div>
 
         {/* Row 3: Navigation Links */}
-        <nav className="mb-24 flex flex-wrap gap-4 md:gap-8 text-xs uppercase tracking-[0.16em] text-white/80">
-          <Link href="/como-trabajamos" className="hover:text-white transition-colors">
-            Cómo trabajamos
+        <nav className="mb-24 flex flex-wrap gap-4 md:gap-8 text-xs uppercase tracking-[0.16em] text-white/80 [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale] font-bold">
+          <Link
+            href="/quienes-somos"
+            className="hover:text-white transition-colors"
+          >
+            Quiénes somos
           </Link>
-          <Link href="/servicios" className="hover:text-white transition-colors">
+          <Link
+            href="/servicios"
+            className="hover:text-white transition-colors"
+          >
             Servicios
           </Link>
-          <Link href="/quienes-somos" className="hover:text-white transition-colors">
-            Sobre nosotros
-          </Link>
-          <Link href="/testimonios" className="hover:text-white transition-colors">
-            Testimonios
+          <Link
+            href="/como-trabajamos"
+            className="hover:text-white transition-colors"
+          >
+            Cómo trabajamos
           </Link>
           <Link href="/contacto" className="hover:text-white transition-colors">
             Contacto
           </Link>
-          
-<a
-  href={
-    "mailto:rrhh@santacruzoyg.com.ar"
-    + "?subject=" + encodeURIComponent("Postulación – Sitio web")
-    + "&body=" + encodeURIComponent(
-        "Hola equipo de RRHH,\n\nMe gustaría postularme para trabajar con ustedes.\nAdjunto mi CV.\n\nSaludos,"
-      )
-  }
-  className="hover:opacity-80"
->
-  Trabaja con nosotros
-</a>
-	
-	 <Link href="https://clientes.santacruzoyg.com.ar/" className="hover:text-white transition-colors">
-            Acceso a clientes
+          <a
+            href="mailto:rrhh@santacruzoyg.com.ar?subject=Postulación%20%E2%80%93%20Sitio%20web&body=Hola%20equipo%20de%20RRHH%2C%0A%0AMe%20gustar%C3%ADa%20postularme%20para%20trabajar%20con%20ellos.%0AAdjunto%20mi%20CV.%0A%0ASaludos%2C"
+            className="hover:text-white transition-colors"
+          >
+            Sumate a nuestro equipo
+          </a>
+          <Link
+            href="https://clientes.santacruzoyg.com.ar/"
+            className="text-[#FF6600] hover:text-[#FF6600]/80 transition-colors"
+          >
+            Acceso clientes
           </Link>
-
         </nav>
 
         {/* Row 4: H2 Title */}
         <h2 className=" w-1/2 text-xl sm:text-2xl font-semibold tracking-[0.08em] text-white uppercase">
-          Implementa el servicio de medicina laboral más eficiente para tu empresa
+          Implementa el servicio de medicina laboral más eficiente para tu
+          empresa
         </h2>
 
         {/* Row 5: Social Icons */}
         <div className="flex items-center gap-4">
-          <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity">
+          <a
+            href="#"
+            aria-label="Instagram"
+            className="hover:opacity-80 transition-opacity"
+          >
             <Instagram className="w-6 h-6 text-white" />
           </a>
-          <a href="#" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            className="hover:opacity-80 transition-opacity"
+          >
             <Linkedin className="w-6 h-6 text-white" />
           </a>
         </div>

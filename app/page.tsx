@@ -11,29 +11,52 @@ import { TestimonialCarousel } from "./components/TestimonialCarousel";
 import { testimonials } from "./data/testimonials";
 
 const stats = [
-  { value: "+20", label: "años de experiencia", image: "/santacruz/rectangle-212.jpg" },
-  { value: "+15", label: "países con cobertura", image: "/santacruz/rectangle-217.jpg" },
-  { value: "+500", label: "empresas atendidas", image: "/santacruz/rectangle-214.jpg" },
-  { value: "12h", label: "tiempo promedio de respuesta", image: "/santacruz/rectangle-215.jpg" },
-  { value: "99.8%", label: "satisfacción del cliente", image: "/santacruz/rectangle-216.jpg" },
+  {
+    value: "+15",
+    label: "años de experiencia",
+    image: "/santacruz/rectangle-212.jpg",
+  },
+  {
+    value: "+15",
+    label: "países con cobertura",
+    image: "/santacruz/rectangle-217.jpg",
+  },
+  {
+    value: "+500",
+    label: "empresas atendidas",
+    image: "/santacruz/rectangle-214.jpg",
+  },
+  {
+    value: "24/7",
+    label: "respuesta inmediata",
+    image: "/santacruz/rectangle-215.jpg",
+  },
+  {
+    value: "99.8%",
+    label: "satisfacción del cliente",
+    image: "/santacruz/rectangle-216.jpg",
+  },
 ];
 
 const benefitCards = [
   {
     number: "01",
-    title: "Adapta tu servicio de cobertura médica laboral y asistencial con herramientas de última generación e IA.",
+    title:
+      "Adapta tu servicio de cobertura médica laboral y asistencial con herramientas de última generación e IA.",
     copy: "Adapta tu servicio de cobertura médica laboral y asistencial con herramientas de última generación e IA.",
     image: "/santacruz/rectangle-221.jpg",
   },
   {
     number: "02",
-    title: "Reduce tiempos de espera agilizando los procesos de toma de información e ingreso de los pacientes.",
+    title:
+      "Reduce tiempos de espera agilizando los procesos de toma de información e ingreso de los pacientes.",
     copy: "Reduce tiempos de espera agilizando los procesos de toma de información e ingreso de los pacientes.",
     image: "/santacruz/rectangle-222.jpg",
   },
   {
     number: "03",
-    title: "Ahorra tiempo y dinero, mediante la centralización de los servicios brindados por la ART y las necesidades específicas de tu empresa.",
+    title:
+      "Ahorra tiempo y dinero, mediante la centralización de los servicios brindados por la ART y las necesidades específicas de tu empresa.",
     copy: "Ahorra tiempo y dinero, mediante la centralización de los servicios brindados por la ART y las necesidades específicas de tu empresa.",
     image: "/santacruz/rectangle-229.jpg",
   },
@@ -64,10 +87,10 @@ export default function Home() {
         <div className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-end px-6 pb-20 pt-24 sm:px-12">
           <div className="max-w-3xl space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-[0.08em] text-white uppercase">
-              Implementa el servicio de medicina laboral más eficiente para tu empresa
+              Implementa el servicio de medicina más eficiente para tu empresa
             </h1>
             <p className="text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
-              gracias a alianzas estratégicas a nivel mundial
+              gracias a alianzas estratégicas a nivel nacional e internacional
             </p>
             <div className="pt-4">
               <CTAButton label="CÓMO LO HACEMOS" variant="primary" />
@@ -85,8 +108,12 @@ export default function Home() {
             ))}
           </div>
           <p className="text-center text-base leading-relaxed text-neutral-800 max-w-5xl mx-auto">
-            Nos diferencia de otros servicios masificados, en <strong>Santa Cruz O&G</strong> desarrollamos un modelo único,
-            rápido y eficiente, para que puedas agilizar la gestión en tu empresa de la medicina laboral que más se adopte a tus necesidades.
+            A diferencia de los servicios masificados{" "}
+            <strong>Santa Cruz O&G</strong> acompaña a todas aquellas empresas
+            que necesitan cubrir sus necesidades de salud, con un enfoque ágil,
+            personalizado y orientado a la gestión eficiente de la operatividad,
+            con respuesta médica inmediata adaptada a entornos de altas
+            exigencias.
           </p>
         </div>
       </section>
@@ -98,20 +125,26 @@ export default function Home() {
             <div className="space-y-4">
               <SectionHeading
                 eyebrow=""
-                title="El problema"
+                title="Centros Médicos Propios (Neuquén Capital y Añelo Vaca Muerta)"
                 align="left"
                 showDivider={true}
                 description={
                   <p>
-                    El auténtico enemigo en materia de salud es el modelo que usan las empresas que prestan servicios
-                    de medicina laboral: burocracia, falta de acceso a tecnologías, gestión ineficiente y carencia de recursos capacitados.
+                    Contamos con Clínicas estratégicamente ubicadas en Neuquén y
+                    Añelo (Vaca Muerta), totalmente equipadas para brindar la
+                    atención médica a empresas. Realizamos exámenes
+                    preocupacionales, periódicos y de egreso, controles
+                    toxicológicos, accidentes (ART) y atención clínica general.
+                    Contamos con vacunatorio, depósito de medicamentos y
+                    espacios exclusivos para ejecutivos. Contamos con convenios
+                    con todas las ART.
                   </p>
                 }
               />
             </div>
             <div className="overflow-hidden shadow-lg">
               <Image
-                src="/santacruz/el-problema.png"
+                src="/santacruz/el-problema-v2.png"
                 alt="El problema"
                 width={0}
                 height={0}
@@ -124,7 +157,7 @@ export default function Home() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
             <div className="overflow-hidden shadow-lg order-2 md:order-1">
               <Image
-                src="/santacruz/la-solucion.png"
+                src="/santacruz/la-solucion-v2.png"
                 alt="La solución"
                 width={0}
                 height={0}
@@ -135,17 +168,50 @@ export default function Home() {
             <div className="space-y-4 order-1 md:order-2">
               <SectionHeading
                 eyebrow=""
-                title="La solución"
+                title="Cobertura en Áreas Remotas"
                 align="left"
                 showDivider={true}
                 dividerDotPosition="left"
                 description={
                   <p>
-                    Hoy los empresarios han visto las carencias del sistema convencional.
-                    No quieren pasar por procesos rígidos que frenan su operación.
-                    Necesitan soluciones que se adapten a sus tiempos y necesidades.
+                    Brindamos servicios médicos en campo. Disponemos de Centros
+                    de Diagnóstico Móviles (CDM) con tecnología de telemedicina
+                    y equipamiento avanzado para garantizar atención inmediata,
+                    prevención y respuesta eficiente en cualquier entorno.
                   </p>
                 }
+              />
+            </div>
+          </div>
+
+          {/* Sección duplicada: Capacitaciones */}
+          <div className="grid gap-6 md:gap-8 md:grid-cols-[1.1fr_1fr] items-center">
+            <div className="space-y-4">
+              <SectionHeading
+                eyebrow=""
+                title="Alianzas Estratégicas"
+                align="left"
+                showDivider={true}
+                description={
+                  <p>
+                    Nuestra red de atención se potencia con convenios exclusivos
+                    con clínicas de referencia en Neuquén y con el Hospital
+                    Alemán en Buenos Aires para derivaciones de alta
+                    complejidad. Además, ofrecemos servicios de medicina
+                    offshore para cuencas marítimas y cobertura global para
+                    personal expatriado.
+                  </p>
+                }
+              />
+            </div>
+            <div className="overflow-hidden shadow-lg">
+              <Image
+                src="/santacruz/alianza.v2.png"
+                alt="Capacitaciones"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -156,8 +222,8 @@ export default function Home() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
           <SectionHeading
-            title="La medicina laboral"
-            highlight="que se adapta a ti"
+            title="Medicina que se adapta a "
+            highlight="nuestros clientes"
             description=""
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -178,7 +244,7 @@ export default function Home() {
                 <div className="flex pt-4">
                   {/* Vertical divider with dot */}
                   <div className="flex flex-col items-center mr-4">
-                    <div className="w-[2px] flex-1 bg-brand" />
+                    <div className="w-0.5 flex-1 bg-brand" />
                     <div className="w-2.5 h-2.5 rounded-full bg-brand -ml-px mt-1" />
                   </div>
 
@@ -187,7 +253,9 @@ export default function Home() {
                     <div className="text-4xl font-light text-brand">
                       {card.number}
                     </div>
-                    <p className="text-sm leading-relaxed text-neutral-700">{card.copy}</p>
+                    <p className="text-sm leading-relaxed text-neutral-700">
+                      {card.copy}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -203,8 +271,8 @@ export default function Home() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 space-y-16">
           <div className="text-center space-y-3">
-            <span className="text-sm uppercase tracking-[0.2em] text-[color:var(--brand-orange)]">
-              Más de 20 años
+            <span className="text-sm uppercase tracking-[0.2em] text-brand">
+              Más de 15 años
             </span>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-[0.08em] text-black">
               Transformando la salud de las empresas
@@ -217,7 +285,7 @@ export default function Home() {
       {/* Testimonio + Logos (Unified) */}
       <section className="relative overflow-hidden">
         {/* Dark background section */}
-        <div className="relative pt-16 pb-32 sm:pb-40">
+        <div className="relative pt-16 pb-20 sm:pb-28">
           <div className="absolute inset-0">
             <Image
               src="/santacruz/rectangle-234.jpg"
@@ -226,7 +294,7 @@ export default function Home() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/65" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/35 to-black/65" />
           </div>
           <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-8 space-y-8 text-white">
             <div className="flex flex-col items-center gap-3 text-center">
@@ -241,7 +309,7 @@ export default function Home() {
         </div>
 
         {/* Testimonial Card - Positioned to bridge sections */}
-        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-8 -mt-16 sm:-mt-20">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-8 mt-0 sm:mt-8">
           <TestimonialCarousel testimonials={testimonials} />
         </div>
 
@@ -249,12 +317,11 @@ export default function Home() {
         <div className="bg-neutral-50 pt-32 sm:pt-36 pb-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
             <SectionHeading
-              title="Nuestros mejores clientes"
-              highlight="nos avalan"
+              title="Nos avalan nuestros mejores clientes"
               description={
                 <p>
-                  Aliados en distintos países confían en nuestra capacidad de respuesta y
-                  flexibilidad operacional.
+                  Aliados en distintos países confían en nuestra capacidad de
+                  respuesta y flexibilidad operacional.
                 </p>
               }
             />
@@ -272,10 +339,14 @@ export default function Home() {
               Responsabilidad Social
             </h2>
             <p className="text-base leading-relaxed text-black/80">
-              <span className="font-semibold">Santa Cruz O&G, reafirma su compromiso de integración tanto con la sociedad como con su entorno</span>,
-              a través de la contribución activa y voluntaria al mejoramiento social del país y con total
-              apego al cumplimiento de las leyes nacionales. Este compromiso se materializa
-              con especial énfasis en las siguientes áreas:
+              <span className="font-semibold">
+                Santa Cruz O&G, reafirma su compromiso de integración tanto con
+                la sociedad como con su entorno
+              </span>
+              , a través de la contribución activa y voluntaria al mejoramiento
+              social del país y con total apego al cumplimiento de las leyes
+              nacionales. Este compromiso se materializa con especial énfasis en
+              las siguientes áreas:
             </p>
           </div>
         </div>
@@ -297,13 +368,13 @@ export default function Home() {
             <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-8">
               <div className="relative w-full">
                 {/* Horizontal connecting line with dots between each box */}
-                <div className="absolute left-0 right-0 top-[70px] sm:top-[80px] hidden lg:flex items-center px-[70px] sm:px-[80px]">
+                <div className="absolute left-0 right-0 top-[70px] sm:top-20 hidden lg:flex items-center px-[70px] sm:px-20">
                   <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
-                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="flex-1 h-0.5 bg-brand" />
                   <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
-                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="flex-1 h-0.5 bg-brand" />
                   <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
-                  <div className="flex-1 h-[2px] bg-brand" />
+                  <div className="flex-1 h-0.5 bg-brand" />
                   <div className="w-2.5 h-2.5 rounded-full bg-brand shrink-0" />
                 </div>
 
@@ -324,7 +395,8 @@ export default function Home() {
                   <div className="flex flex-col items-center relative z-10">
                     <ResponsibilityCard icon="ethics" />
                     <p className="mt-2 sm:mt-4 text-[9px] sm:text-[10px] md:text-sm uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white text-center font-medium leading-relaxed">
-                      Buenas prácticas de gobierno corporativo: ética y transparencia
+                      Buenas prácticas de gobierno corporativo: ética y
+                      transparencia
                     </p>
                   </div>
                   <div className="flex flex-col items-center relative z-10">
@@ -339,7 +411,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

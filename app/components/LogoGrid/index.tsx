@@ -11,8 +11,8 @@ export function LogoGrid({ logos }: LogoGridProps) {
           <Image
             src={logo.src}
             alt={logo.alt}
-            width={160}
-            height={80}
+            width={logo.width ?? 200}
+            height={logo.height ?? 100}
             className="h-auto max-h-16 w-auto object-contain grayscale opacity-80"
           />
         </div>
