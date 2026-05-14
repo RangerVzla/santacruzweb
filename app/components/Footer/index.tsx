@@ -79,11 +79,47 @@ export function Footer() {
           </Link>
         </nav>
 
-        {/* Row 4: H2 Title */}
-        <h2 className=" w-1/2 text-xl sm:text-2xl font-semibold tracking-[0.08em] text-white uppercase">
-          Implementa el servicio de medicina laboral más eficiente para tu
-          empresa
-        </h2>
+        {/* Row 4: Contact Info */}
+        <div className="w-full md:w-2/3 space-y-4 text-sm text-white/80">
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.15em] text-white/80 mb-2 font-bold">
+              Clínicas
+            </h3>
+            <p className="mb-1">
+              <strong className="text-white">Neuquén Capital:</strong> El
+              Topacio 3275 - Parque Industrial Oeste, Neuquén
+            </p>
+            <p>
+              <strong className="text-white">Añelo (Vaca Muerta):</strong> Av.
+              Primeros Pobladores S/N, Los B1C, Añelo, Provincia de Neuquén
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.15em] text-white/80 mb-2 font-bold">
+              Oficinas Comerciales
+            </h3>
+            <p>
+              Teniente de Navío Eliana Krawczyk 685, Edificio Ámbar 2do Piso
+              &quot;B&quot; - Isla 132, Neuquén, Capital
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <a
+              href="mailto:admin@santacruzoyg.com.ar"
+              className="text-white/80 hover:text-brand transition-colors"
+            >
+              admin@santacruzoyg.com.ar
+            </a>
+            <a
+              href="https://wa.me/5492994765704"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-brand transition-colors"
+            >
+              Whatsapp: 299 476 5704
+            </a>
+          </div>
+        </div>
 
         {/* Row 5: Social Icons */}
         <div className="flex items-center gap-4">

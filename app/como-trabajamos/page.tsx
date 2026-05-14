@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
-
-
 export default function ComoTrabajamos() {
   return (
     <main className="bg-white text-black">
@@ -23,7 +21,8 @@ export default function ComoTrabajamos() {
         <div className="relative z-10 mx-auto flex h-full min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-24 sm:px-12">
           <div className="max-w-4xl">
             <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-[0.08em] text-white uppercase">
-              EL ÚNICO SISTEMA DE MEDICINA EMPRESARIAL CON IA QUE SE ADAPTA COMPLETAMENTE A TU EMPRESA
+              EL ÚNICO SISTEMA DE MEDICINA EMPRESARIAL CON IA QUE SE ADAPTA
+              COMPLETAMENTE A TU EMPRESA
             </h1>
           </div>
         </div>
@@ -40,9 +39,10 @@ export default function ComoTrabajamos() {
                 showDivider={true}
                 description={
                   <p>
-                    Los clientes requieren contratar un servicio de medicina laboral y/o salud
-                    empresarial para el cuidado de sus recursos. Es esencial garantizar la
-                    rapidez y la seguridad en la prestación del servicio, asegurando su eficiencia.
+                    El futuro de la medicina Los clientes requieren contratar un
+                    servicio de medicina empresarial para el cuidado de su
+                    personal y es esencial garantizar la rapidez y la seguridad
+                    en la prestación de los servicios, asegurando su eficiencia.
                   </p>
                 }
               />
@@ -79,12 +79,14 @@ export default function ComoTrabajamos() {
                 dividerDotPosition="left"
                 description={
                   <p>
-                    Las empresas tradicionales no ofrecen atención personalizada requerida.
-                    La solución de problemas puede llevar tiempo y se realiza mediante call
-                    centers impersonales. Carecen de la experiencia requerida, no hay una
-                    persona referente, tienen espacios limitados, y la disponibilidad de
-                    estacionamiento es complicada en zonas céntricas. Además, pueden no
-                    contar con todos los recursos y equipamientos en el lugar.
+                    A diferencia de los modelos tradicionales, trabajamos con
+                    una estructura organizacional médica pensada para que la
+                    operación sea más ágil, cercana y resolutiva. Combinamos
+                    clínicas propias en Neuquén y Añelo, red de prestadores
+                    estratégicos, alianzas nacionales e internacionales,
+                    cobertura en campo, personal capacitado, todo ello para
+                    garantizar respuesta médica eficiente para clientes que
+                    merecen esa exigencia.
                   </p>
                 }
               />
@@ -100,19 +102,29 @@ export default function ComoTrabajamos() {
             EL FUTURO
           </h2>
           <p className="text-lg sm:text-xl tracking-[0.15em] text-brand uppercase mt-2">
-            DE LA MEDICINA LABORAL
+            DE LA MEDICINA PARA EMPRESAS
           </p>
           <p className="mt-8 text-neutral-700 leading-relaxed">
-            Hemos decidido desarrollar una <strong>plataforma propia de Medicina Laboral con asistencia al cliente</strong>, con el objetivo de aumentar la eficiencia del servicio en comparación con las soluciones disponibles en el mercado.
+            Hemos decidido desarrollar una{" "}
+            <strong>
+              plataforma propia de Medicina para Empresas con asistencia
+              personalizada al cliente
+            </strong>
+            , con el objetivo de aumentar la eficiencia del servicio y obtener
+            resultados fiables e inmediatos.
           </p>
           <p className="mt-4 text-neutral-700 leading-relaxed">
-            Esta plataforma cuenta con estos <strong>pilares fundamentales para ofrecer el mejor servicio médico laboral:</strong>
+            Esta plataforma cuenta con estos{" "}
+            <strong>
+              pilares fundamentales para ofrecer el mejor servicio médico
+              laboral:
+            </strong>
           </p>
         </div>
       </section>
 
       {/* Feature Card 01 */}
-      <section className="bg-white py-16 overflow-hidden">
+      <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
@@ -128,21 +140,22 @@ export default function ComoTrabajamos() {
                 IA QUE REVOLUCIONA TU GESTIÓN.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                Implementamos nuestro nuevo software de Medicina con App e inteligencia artificial para el ingreso de pacientes. Esto permite gestionar necesidades de forma más práctica y eficiente al momento de cargar turnos y dar ingreso a empleados para la realización de exámenes de rutina.
+                Implementamos nuestro nuevo software de Medicina con App e
+                inteligencia artificial para el ingreso de pacientes. Esto
+                permite gestionar necesidades de forma más práctica y eficiente
+                al momento de cargar turnos y dar ingreso a empleados para la
+                realización de exámenes de rutina.
               </p>
             </div>
-            {/* Right - Image with Number */}
-            <div className="relative">
-              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
-                01
-              </span>
+            {/* Right - Image */}
+            <div>
               <Image
                 src="/santacruz/futuro-1.png"
                 alt="Tecnología aplicada"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto relative z-0"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -153,18 +166,15 @@ export default function ComoTrabajamos() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left - Image with Number */}
-            <div className="relative">
-              <span className="absolute -top-8 right-0 text-[10rem] font-light text-brand leading-none z-20">
-                02
-              </span>
+            {/* Left - Image */}
+            <div>
               <Image
                 src="/santacruz/futuro-2.png"
                 alt="Ahorro económico"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto relative z-0"
+                className="w-full h-auto"
               />
             </div>
             {/* Right - Text Content */}
@@ -180,7 +190,11 @@ export default function ComoTrabajamos() {
                 OPTIMIZACIÓN REAL DE RECURSOS.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                El cliente prescinde de recursos administrativos, optimiza el tiempo de gestión, ya que él mismo puede encargarse de su propio ingreso, de obtener exámenes digitalizados y recibir avisos automáticos con los resultados 24/7. Esto reduce costos operativos significativamente.
+                El cliente prescinde de recursos administrativos, optimiza el
+                tiempo de gestión, ya que él mismo puede encargarse de su propio
+                ingreso, de obtener exámenes digitalizados y recibir avisos
+                automáticos con los resultados 24/7. Esto reduce costos
+                operativos significativamente.
               </p>
             </div>
           </div>
@@ -204,21 +218,20 @@ export default function ComoTrabajamos() {
                 CONTACTO DIRECTO, SIN INTERMEDIARIOS.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                Te ponemos en contacto al momento de la recepción con la persona que tiene que atender tu petición, reduciendo el tiempo de espera. No más call centers frustrantes.
+                Te ponemos en contacto al momento de la recepción con la persona
+                que tiene que atender tu petición, reduciendo el tiempo de
+                espera. No más call centers frustrantes.
               </p>
             </div>
-            {/* Right - Image with Number */}
-            <div className="relative">
-              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
-                03
-              </span>
+            {/* Right - Image */}
+            <div>
               <Image
                 src="/santacruz/futuro-3.png"
                 alt="Practicidad"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto relative z-0"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -229,18 +242,15 @@ export default function ComoTrabajamos() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left - Image with Number */}
-            <div className="relative">
-              <span className="absolute -top-8 right-0 text-[10rem] font-light text-brand leading-none z-20">
-                04
-              </span>
+            {/* Left - Image */}
+            <div>
               <Image
                 src="/santacruz/futuro-4.png"
                 alt="Eficiencia"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto relative z-0"
+                className="w-full h-auto"
               />
             </div>
             {/* Right - Text Content */}
@@ -256,7 +266,9 @@ export default function ComoTrabajamos() {
                 RUTA OPTIMIZADA EN EXÁMENES DE SALUD.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                El paciente tendrá definida su hoja de ruta con los estudios que debe realizar dentro del circuito del estudio o examen. Sin pérdidas de tiempo, sin confusiones.
+                El paciente tendrá definida su hoja de ruta con los estudios que
+                debe realizar dentro del circuito del estudio o examen. Sin
+                pérdidas de tiempo, sin confusiones.
               </p>
             </div>
           </div>
@@ -280,21 +292,20 @@ export default function ComoTrabajamos() {
                 NOTIFICACIÓN AUTOMÁTICA EN 24 HORAS.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                Notificamos a la empresa/cliente la finalización de los estudios del paciente y entrega el examen en el término de 24 horas. Transparencia total en tiempo real.
+                Notificamos a la empresa/cliente la finalización de los estudios
+                del paciente y entrega el examen en el término de 24 horas.
+                Transparencia total en tiempo real.
               </p>
             </div>
-            {/* Right - Image with Number */}
-            <div className="relative">
-              <span className="absolute -top-4 left-0 text-[5rem] sm:text-[7rem] md:text-[10rem] font-light text-brand leading-none z-20 md:-top-8 md:-left-8">
-                05
-              </span>
+            {/* Right - Image */}
+            <div>
               <Image
                 src="/santacruz/futuro-5.png"
                 alt="Comunicación"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto relative z-0"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -325,12 +336,14 @@ export default function ComoTrabajamos() {
             <div
               className="relative sm:absolute inset-y-0 left-0 w-full md:w-1/2 flex flex-col justify-center px-6 py-8 sm:px-12 lg:px-16 min-h-[400px] sm:min-h-0"
               style={{
-                background: "linear-gradient(to bottom, rgba(77, 77, 77, 0.6), rgba(223, 86, 0, 0.6))",
+                background:
+                  "linear-gradient(to bottom, rgba(77, 77, 77, 0.6), rgba(223, 86, 0, 0.6))",
               }}
             >
               <p className="text-white text-base sm:text-lg leading-relaxed max-w-md">
                 Agenda una llamada o visita con un asesor de{" "}
-                <strong>Santa Cruz O&G</strong> para elaborar una solución adaptada a tu empresa.
+                <strong>Santa Cruz O&G</strong> para elaborar una solución
+                adaptada a tu empresa.
               </p>
               <Link
                 href="/contacto"
@@ -406,22 +419,47 @@ export default function ComoTrabajamos() {
                   strokeWidth="2"
                   fill="none"
                 />
-                <line x1="20" y1="8" x2="20" y2="20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <line x1="44" y1="8" x2="44" y2="20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <line x1="8" y1="28" x2="56" y2="28" stroke="currentColor" strokeWidth="2" />
+                <line
+                  x1="20"
+                  y1="8"
+                  x2="20"
+                  y2="20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <line
+                  x1="44"
+                  y1="8"
+                  x2="44"
+                  y2="20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <line
+                  x1="8"
+                  y1="28"
+                  x2="56"
+                  y2="28"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
               </svg>
 
               <p className="text-neutral-700 leading-relaxed">
                 <span className="text-brand font-semibold uppercase tracking-wide">
                   AL CONTRATAR NUESTROS SERVICIOS DE MEDICINA LABORAL,
                 </span>{" "}
-                tendrás exclusivamente para tu empresa y empleados, a disposición nuestras clínicas un día específico, para que puedan realizar sus exámenes sin tener inconvenientes en su movilización.
+                tendrás exclusivamente para tu empresa y empleados, a
+                disposición nuestras clínicas un día específico, para que puedan
+                realizar sus exámenes sin tener inconvenientes en su
+                movilización.
               </p>
             </div>
           </div>
         </div>
       </section>
-
     </main>
   );
 }
