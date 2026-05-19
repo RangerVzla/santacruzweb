@@ -318,7 +318,7 @@ export default function Servicios() {
             <ValueCard
               icon="alliances"
               title="Alianzas estratégicas"
-              description="Convenio exclusivo con Policlínico Neuquén, Hospital Alemán y red internacional de prestadores"
+              description="Convenios exclusivos con clínicas de alta complejidad en Neuquén Capital y Hospital Alemán en Buenos Aires. "
             />
           </div>
         </div>
