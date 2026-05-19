@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { ValueCard } from "../components/ValueCard";
 
-
 export default function Servicios() {
   return (
     <main className="bg-white text-black">
@@ -24,7 +23,8 @@ export default function Servicios() {
               Servicios médicos profesionales flexibles
             </h1>
             <p className="text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
-              Más de 15 años liderando la medicina en la Cuenca Neuquina con tecnología de vanguardia
+              Más de 15 años liderando la medicina en la Cuenca Neuquina con
+              tecnología de vanguardia
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Servicios() {
           <div className="relative">
             <div className="relative aspect-video overflow-hidden rounded-2xl">
               <Image
-                src="/santacruz/servicios-1.png"
+                src="/santacruz/servicios-1-b.png"
                 alt="Atención médica en clínica"
                 fill
                 className="object-cover"
@@ -51,10 +51,11 @@ export default function Servicios() {
             <p className="text-sm sm:text-base uppercase tracking-[0.12em] leading-relaxed">
               <span className="text-neutral-800">
                 DESDE NUESTRA CLÍNICA EN AÑELO, LA PRIMERA DEDICADA
-                EXCLUSIVAMENTE A LA SALUD DE LOS TRABAJADORES, OFRECEMOS{" "}
+                EXCLUSIVAMENTE A LA SALUD DEL PERSONAL, OFRECEMOS{" "}
               </span>
               <span className="text-brand">
-                SOLUCIONES QUE COMBINAN ATENCIÓN MÉDICA DE EXCELENCIA, TECNOLOGÍA PROPIA Y DISPONIBILIDAD 24/7
+                SOLUCIONES QUE COMBINAN ATENCIÓN MÉDICA DE EXCELENCIA,
+                TECNOLOGÍA PROPIA Y DISPONIBILIDAD 24/7 LOS 365 DÍAS DEL AÑO
               </span>
             </p>
           </div>
@@ -110,9 +111,9 @@ export default function Servicios() {
                   </p>
                 </div>
               </div>
-              <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                Más información
-              </button>
+              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
+                                    Más información
+                                  </button> */}
             </div>
           </div>
         </div>
@@ -128,23 +129,39 @@ export default function Servicios() {
                   Tecnología en áreas remotas
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
-                  Centro de diagnóstico portátil
+                  Centro de diagnóstico (portátil)
                 </h2>
               </div>
               <div className="h-[2px] w-full bg-brand" />
               <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Telemedicina</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Irisoscopio</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Ecógrafo</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Otoscopio</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Cámara de inspección</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Estetoscopio digital</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">Dermatoscopio</p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">E.C.G y otros</p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Telemedicina
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Iridoscopio
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Ecógrafo
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Otoscopio
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Cámara de inspección
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Estetoscopio digital
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  Dermatoscopio
+                </p>
+                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
+                  E.C.G y otros
+                </p>
               </div>
-              <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
+              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
                 Más información
-              </button>
+              </button> */}
             </div>
             <div className="relative aspect-square overflow-hidden order-1 md:order-2">
               <Image
@@ -211,9 +228,9 @@ export default function Servicios() {
                   </p>
                 </div>
               </div>
-              <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                Más información
-              </button>
+              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
+                                    Más información
+                                  </button> */}
             </div>
           </div>
         </div>
@@ -262,9 +279,9 @@ export default function Servicios() {
                   </p>
                 </div>
               </div>
-              <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                Más información
-              </button>
+              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
+                                    Más información
+                                  </button> */}
             </div>
             <div className="relative aspect-4/5 overflow-hidden order-1 md:order-2">
               <Image
@@ -306,7 +323,6 @@ export default function Servicios() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
