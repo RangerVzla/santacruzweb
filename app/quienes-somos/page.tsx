@@ -62,12 +62,12 @@ export default function QuienesSomos() {
           </div>
           <div className="mt-24 flex items-start gap-4">
             <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0 -ml-[3px]" />
-            <p className="text-sm sm:text-base uppercase tracking-[0.12em] leading-relaxed">
-              <span className="text-neutral-800">
+            <p className="text-sm sm:text-base uppercase tracking-[0.12em] leading-relaxed text-justify">
+              <span className="text-neutral-800 text-justify">
                 Santa Cruz O&G es una empresa nacida en Neuquén, Patagonia
                 Argentina, con más de 15 años de trayectoria.
               </span>
-              <span className="text-[color:var(--brand-orange)]">
+              <span className="text-[color:var(--brand-orange)] text-justify">
                 Se ha posicionado en el mercado brindando soluciones flexibles y
                 eficientes, que responden a las necesidades de cada cliente.
               </span>
@@ -95,7 +95,7 @@ export default function QuienesSomos() {
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
               </div>
               <div className="space-y-4">
-                <p className="text-base leading-relaxed text-neutral-800">
+                <p className="text-base leading-relaxed text-neutral-800 text-justify">
                   A lo largo de nuestra experiencia, entendimos que la
                   constancia, la innovación y la personalización son los pilares
                   de un crecimiento sostenido. Queremos transformar el modo de
@@ -117,7 +117,7 @@ export default function QuienesSomos() {
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
                 <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
               </div>
-              <p className="text-base leading-relaxed text-neutral-800">
+              <p className="text-base leading-relaxed text-neutral-800 text-justify">
                 En 2015 marcamos un hito al ser pioneros con la inauguración de
                 la primera clínica privada en Añelo, reafirmando nuestro
                 compromiso con el desarrollo de Añelo y Vaca Muerta.
@@ -154,7 +154,7 @@ export default function QuienesSomos() {
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
               </div>
               <div className="space-y-4">
-                <p className="text-base leading-relaxed text-neutral-800">
+                <p className="text-base leading-relaxed text-neutral-800 text-justify">
                   Hoy nuestro compromiso es liderar el mercado a través de la
                   tecnología y una estructura sólida para brindar el servicio
                   más eficiente de la Cuenca Neuquina.
