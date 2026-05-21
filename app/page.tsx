@@ -63,11 +63,13 @@ const benefitCards = [
 ];
 
 const carouselImages = [
-  { src: "/santacruz/rectangle-243.jpg", alt: "Consulta médica" },
-  { src: "/santacruz/rectangle-226.jpg", alt: "Atención médica" },
-  { src: "/santacruz/rectangle-227.jpg", alt: "Equipo médico" },
-  { src: "/santacruz/rectangle-223.jpg", alt: "Servicios médicos" },
-  { src: "/santacruz/rectangle-221.jpg", alt: "Profesionales de salud" },
+  { src: "/santacruz/carousel-6.png", alt: "Consulta médica" },
+  { src: "/santacruz/carousel-2.png", alt: "Atención médica" },
+  { src: "/santacruz/carousel-3.png", alt: "Equipo médico" },
+  { src: "/santacruz/carousel-4.png", alt: "Servicios médicos" },
+  { src: "/santacruz/carousel-5.png", alt: "Profesionales de salud" },
+  { src: "/santacruz/carousel-1.png", alt: "Acompañando Empresas" },
+  { src: "/santacruz/carousel-7.png", alt: "Profesionales de salud" },
 ];
 
 export default function Home() {
@@ -89,7 +91,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-[0.08em] text-white uppercase">
               Implementa el servicio de medicina más eficiente para tu empresa
             </h1>
-            <p className="text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
+            <p className="text-justify text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
               gracias a alianzas estratégicas a nivel nacional e internacional
             </p>
             <div className="pt-4">
@@ -107,7 +109,7 @@ export default function Home() {
               <StatCard key={item.label} {...item} />
             ))}
           </div>
-          <p className="text-center text-base leading-relaxed text-neutral-800 max-w-5xl mx-auto">
+          <p className="text-justify text-base leading-relaxed text-neutral-800 max-w-5xl mx-auto">
             A diferencia de los servicios masificados{" "}
             <strong>Santa Cruz O&G</strong> acompaña a todas aquellas empresas
             que necesitan cubrir sus necesidades de salud, con un enfoque ágil,
@@ -129,7 +131,7 @@ export default function Home() {
                 align="left"
                 showDivider={true}
                 description={
-                  <p>
+                  <p className="text-justify">
                     Contamos con Clínicas estratégicamente ubicadas en Neuquén y
                     Añelo (Vaca Muerta), totalmente equipadas para brindar la
                     atención médica a empresas. Realizamos exámenes
@@ -173,7 +175,7 @@ export default function Home() {
                 showDivider={true}
                 dividerDotPosition="left"
                 description={
-                  <p>
+                  <p className="text-justify">
                     Brindamos servicios médicos en campo. Disponemos de Centros
                     de Diagnóstico Móviles (CDM) con tecnología de telemedicina
                     y equipamiento avanzado para garantizar atención inmediata,
@@ -193,7 +195,7 @@ export default function Home() {
                 align="left"
                 showDivider={true}
                 description={
-                  <p>
+                  <p className="text-justify">
                     Nuestra red de atención se potencia con convenios exclusivos
                     con clínicas de referencia en Neuquén y con el Hospital
                     Alemán en Buenos Aires para derivaciones de alta
@@ -317,7 +319,7 @@ export default function Home() {
         <div className="bg-neutral-50 pt-32 sm:pt-36 pb-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
             <SectionHeading
-              title="Nos avalan nuestros mejores clientes"
+              title="Acompañamos a Empresas"
               description={
                 <p>
                   Aliados en distintos países confían en nuestra capacidad de
@@ -338,7 +340,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-[0.08em] text-black uppercase">
               Responsabilidad Social
             </h2>
-            <p className="text-base leading-relaxed text-black/80">
+            <p className="text-justify text-base leading-relaxed text-black/80">
               <span className="font-semibold">
                 Santa Cruz O&G, reafirma su compromiso de integración tanto con
                 la sociedad como con su entorno

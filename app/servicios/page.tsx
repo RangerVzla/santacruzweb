@@ -165,7 +165,7 @@ export default function Servicios() {
             </div>
             <div className="relative aspect-square overflow-hidden order-1 md:order-2">
               <Image
-                src="/santacruz/servicios-3.png"
+                src="/santacruz/servicios-3-b.png"
                 alt="Centro de diagnóstico portátil"
                 fill
                 className="object-contain"

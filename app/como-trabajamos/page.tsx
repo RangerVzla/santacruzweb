@@ -38,11 +38,11 @@ export default function ComoTrabajamos() {
                 align="left"
                 showDivider={true}
                 description={
-                  <p>
-                    El futuro de la medicina Los clientes requieren contratar un
-                    servicio de medicina empresarial para el cuidado de su
-                    personal y es esencial garantizar la rapidez y la seguridad
-                    en la prestación de los servicios, asegurando su eficiencia.
+                  <p className="text-justify">
+                    Para clientes que requieren contratar un servicio de
+                    medicina empresarial para el cuidado de su personal, es
+                    esencial garantizar la rapidez y la seguridad en la
+                    prestación de los servicios, asegurando su eficiencia.
                   </p>
                 }
               />
@@ -62,7 +62,7 @@ export default function ComoTrabajamos() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
             <div className="overflow-hidden shadow-lg order-2 md:order-1">
               <Image
-                src="/santacruz/trabajamos-2.png"
+                src="/santacruz/trabajamos-2-b.png"
                 alt="Lo que otros no pueden ofrecerte"
                 width={0}
                 height={0}
@@ -78,7 +78,7 @@ export default function ComoTrabajamos() {
                 showDivider={true}
                 dividerDotPosition="left"
                 description={
-                  <p>
+                  <p className="text-justify">
                     A diferencia de los modelos tradicionales, trabajamos con
                     una estructura organizacional médica pensada para que la
                     operación sea más ágil, cercana y resolutiva. Combinamos
@@ -104,7 +104,7 @@ export default function ComoTrabajamos() {
           <p className="text-lg sm:text-xl tracking-[0.15em] text-brand uppercase mt-2">
             DE LA MEDICINA PARA EMPRESAS
           </p>
-          <p className="mt-8 text-neutral-700 leading-relaxed">
+          <p className="mt-8 text-justify text-neutral-700 leading-relaxed">
             Hemos decidido desarrollar una{" "}
             <strong>
               plataforma propia de Medicina para Empresas con asistencia
@@ -113,7 +113,7 @@ export default function ComoTrabajamos() {
             , con el objetivo de aumentar la eficiencia del servicio y obtener
             resultados fiables e inmediatos.
           </p>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
+          <p className="mt-4 text-justify text-neutral-700 leading-relaxed">
             Esta plataforma cuenta con estos{" "}
             <strong>
               pilares fundamentales para ofrecer el mejor servicio médico
@@ -139,7 +139,7 @@ export default function ComoTrabajamos() {
               <p className="text-brand uppercase tracking-wider text-sm font-medium pt-2">
                 IA QUE REVOLUCIONA TU GESTIÓN.
               </p>
-              <p className="text-neutral-700 leading-relaxed">
+              <p className="text-justify text-neutral-700 leading-relaxed">
                 Implementamos nuestro nuevo software de Medicina con App e
                 inteligencia artificial para el ingreso de pacientes. Esto
                 permite gestionar necesidades de forma más práctica y eficiente
@@ -169,7 +169,7 @@ export default function ComoTrabajamos() {
             {/* Left - Image */}
             <div>
               <Image
-                src="/santacruz/futuro-2.png"
+                src="/santacruz/futuro-2-b.png"
                 alt="Ahorro económico"
                 width={0}
                 height={0}
@@ -180,7 +180,7 @@ export default function ComoTrabajamos() {
             {/* Right - Text Content */}
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold tracking-[0.08em] text-black uppercase">
-                AHORRO ECONÓMICO
+                EFICIENCIA FINANCIERA
               </h3>
               <div className="flex items-center gap-2 max-w-sm">
                 <div className="w-3 h-3 rounded-full bg-brand" />
@@ -189,12 +189,11 @@ export default function ComoTrabajamos() {
               <p className="text-brand uppercase tracking-wider text-sm font-medium pt-2">
                 OPTIMIZACIÓN REAL DE RECURSOS.
               </p>
-              <p className="text-neutral-700 leading-relaxed">
-                El cliente prescinde de recursos administrativos, optimiza el
-                tiempo de gestión, ya que él mismo puede encargarse de su propio
-                ingreso, de obtener exámenes digitalizados y recibir avisos
-                automáticos con los resultados 24/7. Esto reduce costos
-                operativos significativamente.
+              <p className="text-justify text-neutral-700 leading-relaxed">
+                Se reduce la carga administrativa al permitir que cada empresa
+                gestione ingresos, acceda a estudios digitalizados y reciba
+                notificaciones automáticas. Esto se traduce en menor tiempo
+                operativo y una reducción concreta de costos
               </p>
             </div>
           </div>
@@ -215,9 +214,9 @@ export default function ComoTrabajamos() {
                 <div className="w-3 h-3 rounded-full bg-brand" />
               </div>
               <p className="text-brand uppercase tracking-wider text-sm font-medium pt-2">
-                CONTACTO DIRECTO, SIN INTERMEDIARIOS.
+                EXPERIENCIA SIN COMPLICACIONES
               </p>
-              <p className="text-neutral-700 leading-relaxed">
+              <p className="text-justify text-neutral-700 leading-relaxed">
                 Te ponemos en contacto al momento de la recepción con la persona
                 que tiene que atender tu petición, reduciendo el tiempo de
                 espera. No más call centers frustrantes.
@@ -226,7 +225,7 @@ export default function ComoTrabajamos() {
             {/* Right - Image */}
             <div>
               <Image
-                src="/santacruz/futuro-3.png"
+                src="/santacruz/futuro-3-b.png"
                 alt="Practicidad"
                 width={0}
                 height={0}
@@ -245,7 +244,7 @@ export default function ComoTrabajamos() {
             {/* Left - Image */}
             <div>
               <Image
-                src="/santacruz/futuro-4.png"
+                src="/santacruz/futuro-4-b.png"
                 alt="Eficiencia"
                 width={0}
                 height={0}
@@ -265,10 +264,10 @@ export default function ComoTrabajamos() {
               <p className="text-brand uppercase tracking-wider text-sm font-medium pt-2">
                 RUTA OPTIMIZADA EN EXÁMENES DE SALUD.
               </p>
-              <p className="text-neutral-700 leading-relaxed">
-                El paciente tendrá definida su hoja de ruta con los estudios que
-                debe realizar dentro del circuito del estudio o examen. Sin
-                pérdidas de tiempo, sin confusiones.
+              <p className="text-justify text-neutral-700 leading-relaxed">
+                Cada paciente sigue un circuito optimizado, con estudios
+                organizados estratégicamente para reducir tiempos de espera y
+                agilizar su atención.
               </p>
             </div>
           </div>
@@ -289,12 +288,12 @@ export default function ComoTrabajamos() {
                 <div className="w-3 h-3 rounded-full bg-brand" />
               </div>
               <p className="text-brand uppercase tracking-wider text-sm font-medium pt-2">
-                NOTIFICACIÓN AUTOMÁTICA EN 24 HORAS.
+                NOTIFICACIÓN AUTOMÁTICA
               </p>
-              <p className="text-neutral-700 leading-relaxed">
-                Notificamos a la empresa/cliente la finalización de los estudios
-                del paciente y entrega el examen en el término de 24 horas.
-                Transparencia total en tiempo real.
+              <p className="text-justify text-neutral-700 leading-relaxed">
+                Notificamos automáticamente a la empresa la finalización de los
+                estudios del paciente y entregamos los resultados de forma
+                digital, dentro de los tiempos acordados con cada cliente.
               </p>
             </div>
             {/* Right - Image */}
@@ -319,14 +318,14 @@ export default function ComoTrabajamos() {
             EMPIEZA A APLICAR
           </h2>
           <p className="text-lg sm:text-xl tracking-[0.15em] text-brand uppercase mt-2">
-            LA MEDICINA LABORAL FLEXIBLE
+            LA MEDICINA EMPRESARIAL FLEXIBLE
           </p>
         </div>
 
         <div className="mx-auto max-w-5xl px-0 sm:px-8">
           <div className="relative overflow-hidden min-h-[400px] sm:min-h-0">
             <Image
-              src="/santacruz/empieza-1.png"
+              src="/santacruz/empieza-1-b.png"
               alt="Empieza a aplicar la medicina laboral flexible"
               width={0}
               height={0}
@@ -340,8 +339,8 @@ export default function ComoTrabajamos() {
                   "linear-gradient(to bottom, rgba(77, 77, 77, 0.6), rgba(223, 86, 0, 0.6))",
               }}
             >
-              <p className="text-white text-base sm:text-lg leading-relaxed max-w-md">
-                Agenda una llamada o visita con un asesor de{" "}
+              <p className="text-justify text-white text-base sm:text-lg leading-relaxed max-w-md">
+                Solicita tu cita con un asesor de{" "}
                 <strong>Santa Cruz O&G</strong> para elaborar una solución
                 adaptada a tu empresa.
               </p>
@@ -447,7 +446,7 @@ export default function ComoTrabajamos() {
                 />
               </svg>
 
-              <p className="text-neutral-700 leading-relaxed">
+              <p className="text-justify text-neutral-700 leading-relaxed">
                 <span className="text-brand font-semibold uppercase tracking-wide">
                   AL CONTRATAR NUESTROS SERVICIOS DE MEDICINA LABORAL,
                 </span>{" "}

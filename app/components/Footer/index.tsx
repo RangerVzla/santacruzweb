@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         {/* Row 3: Navigation Links */}
-        <nav className="mb-24 flex flex-wrap gap-4 md:gap-8 text-xs uppercase tracking-[0.16em] text-white/80 [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale] font-bold">
+        {/* <nav className="mb-24 flex flex-wrap gap-4 md:gap-8 text-xs uppercase tracking-[0.16em] text-white/80 [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale] font-bold">
           <Link
             href="/quienes-somos"
             className="hover:text-white transition-colors"
@@ -77,7 +77,7 @@ export function Footer() {
           >
             Acceso clientes
           </Link>
-        </nav>
+        </nav> */}
 
         {/* Row 4: Contact Info */}
         <div className="w-full md:w-2/3 space-y-4 text-sm text-white/80">
@@ -124,14 +124,27 @@ export function Footer() {
         {/* Row 5: Social Icons */}
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://www.facebook.com/santacruz.oyg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="hover:opacity-80 transition-opacity"
+          >
+            <Facebook className="w-6 h-6 text-white" />
+          </a>
+          <a
+            href="https://www.instagram.com/santacruz.oyg/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="hover:opacity-80 transition-opacity"
           >
             <Instagram className="w-6 h-6 text-white" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/santacruzoyg/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="hover:opacity-80 transition-opacity"
           >

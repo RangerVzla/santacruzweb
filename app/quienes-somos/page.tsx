@@ -11,7 +11,7 @@ export default function QuienesSomos() {
       {/* Hero */}
       <section className="relative min-h-screen overflow-hidden">
         <Image
-          src="/santacruz/quienes-somos.png"
+          src="/santacruz/quienes-somos-1.png"
           alt="Quiénes somos"
           fill
           className="object-cover"
@@ -22,8 +22,24 @@ export default function QuienesSomos() {
         <div className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 pb-20 pt-24 sm:px-12">
           <div className="max-w-3xl space-y-6">
             <h1 className="text-xl sm:text-2xl md:text-3xl leading-tight tracking-[0.08em] text-white uppercase">
-              MÁS DE 20 AÑOS A TU LADO
+              MÁS DE 15 AÑOS A TU LADO
             </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Vimeo Video Section */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              src="https://player.vimeo.com/video/1159012688?autoplay=1&background=0&badge=0&autopause=0&player_id=0&app_id=58479"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Video Vimeo"
+            />
           </div>
         </div>
       </section>
@@ -48,11 +64,12 @@ export default function QuienesSomos() {
             <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0 -ml-[3px]" />
             <p className="text-sm sm:text-base uppercase tracking-[0.12em] leading-relaxed">
               <span className="text-neutral-800">
-                SANTA CRUZ O&G SURGE EN 2005 DE UNA HISTORIA FAMILIAR TRADICIONAL
-                ESTRUCTURADA, LANZÁNDOSE AL MERCADO{" "}
+                Santa Cruz O&G es una empresa nacida en Neuquén, Patagonia
+                Argentina, con más de 15 años de trayectoria.
               </span>
               <span className="text-[color:var(--brand-orange)]">
-                PARA SATISFACER NECESIDADES MÁS FLEXIBLES HACIA NUESTROS CLIENTES.
+                Se ha posicionado en el mercado brindando soluciones flexibles y
+                eficientes, que responden a las necesidades de cada cliente.
               </span>
             </p>
           </div>
@@ -62,10 +79,10 @@ export default function QuienesSomos() {
       {/* Stairs Section */}
       <section className="bg-neutral-100 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-start">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src="/santacruz/stairs.png"
+                src="/santacruz/quienes-somos-3.png"
                 alt="Profesionales médicos"
                 fill
                 className="object-cover"
@@ -79,10 +96,11 @@ export default function QuienesSomos() {
               </div>
               <div className="space-y-4">
                 <p className="text-base leading-relaxed text-neutral-800">
-                  Tras empezar a trabajar con nuestros primeros clientes, aprendimos que la constancia y resiliencia pueden hacer crecer una pequeña empresa, y que la inversión e innovación son claves para el desarrollo constante.
-                </p>
-                <p className="text-base leading-relaxed text-neutral-800">
-                  Queremos cambiar el modo de ver al paciente, la manera de atenderlo, de acompañarlo. Por ello garantizamos la mejor atención respaldada por nuestros años de experiencia.
+                  A lo largo de nuestra experiencia, entendimos que la
+                  constancia, la innovación y la personalización son los pilares
+                  de un crecimiento sostenido. Queremos transformar el modo de
+                  cuidar al paciente, brindando una atención humana y técnica de
+                  excelencia.
                 </p>
               </div>
             </div>
@@ -93,24 +111,55 @@ export default function QuienesSomos() {
       {/* Doctor Section */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-end">
-            <div className="space-y-6 md:pb-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="space-y-6">
               <div className="flex items-center gap-2">
                 <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
                 <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
               </div>
               <p className="text-base leading-relaxed text-neutral-800">
-                El mayor reto que tenemos por delante es alcanzar mayores niveles de innovación y tecnología, así como establecer una estructura sólida que nos permita brindar un mejor servicio a nuestros clientes.
+                En 2015 marcamos un hito al ser pioneros con la inauguración de
+                la primera clínica privada en Añelo, reafirmando nuestro
+                compromiso con el desarrollo de Añelo y Vaca Muerta.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/santacruz/doctor.png"
+                src="/santacruz/quienes-somos-4.png"
                 alt="Doctor con paciente"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-neutral-100 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/santacruz/quienes-somos-5.png"
+                alt="Imagen quienes somos 5"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+            <div className="space-y-6 md:pt-8">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
+                <div className="h-px flex-1 bg-[color:var(--brand-orange)]" />
+              </div>
+              <div className="space-y-4">
+                <p className="text-base leading-relaxed text-neutral-800">
+                  Hoy nuestro compromiso es liderar el mercado a través de la
+                  tecnología y una estructura sólida para brindar el servicio
+                  más eficiente de la Cuenca Neuquina.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -146,22 +195,21 @@ export default function QuienesSomos() {
       </section>
 
       {/* Client Logos */}
-      <section className="bg-neutral-50 py-16">
+      {/* <section className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
           <SectionHeading
             title="Nuestros mejores clientes"
             highlight="nos avalan"
             description={
               <p>
-                Aliados en distintos países confían en nuestra capacidad de respuesta y
-                flexibilidad operacional.
+                Aliados en distintos países confían en nuestra capacidad de
+                respuesta y flexibilidad operacional.
               </p>
             }
           />
           <ClientLogosGrid />
         </div>
-      </section>
-
+      </section> */}
     </main>
   );
 }
