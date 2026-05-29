@@ -78,37 +78,38 @@ export default function Servicios() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
-                  Servicios médicos especializados
+                  Servicio médico en áreas remotas
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
-                  Medicina laboral integral y atención de campo
+                  Llevamos lo que necesites en tu operación Equipos médicos
+                  completos desplegados directamente in situ
                 </h2>
               </div>
               <div className="h-[2px] w-full bg-brand" />
               <div className="space-y-6">
                 <div className="space-y-1">
                   <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Servicio médico de campo
+                    Médico Director, Médico de Campo y Asistente Coordinador
                   </h3>
-                  <p className="text-sm text-neutral-600">
-                    Equipos completos desplegados en sitios remotos
-                  </p>
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Medicina laboral integral
+                    Unidades Móviles de Alta Complejidad (ambulancias 4X4
+                    totalmente equipadas como Clase “A”)
                   </h3>
-                  <p className="text-sm text-neutral-600">
+                  {/* <p className="text-sm text-neutral-600">
                     Exámenes preocupacionales, periódicos y preventivos
-                  </p>
+                  </p> */}
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Servicio VIP para ejecutivos
+                    Consultorios en campo con sistemas de comunicación
+                    integrados (Starlink, radiocomunicación)
                   </h3>
+                  {/*
                   <p className="text-sm text-neutral-600">
                     Atención exclusiva en sala lounge premium
-                  </p>
+                  </p>*/}
                 </div>
               </div>
               {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">

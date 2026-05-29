@@ -140,11 +140,11 @@ export default function ComoTrabajamos() {
                 IA QUE REVOLUCIONA TU GESTIÓN.
               </p>
               <p className="text-justify text-neutral-700 leading-relaxed">
-                Implementamos nuestro nuevo software de Medicina con App e
-                inteligencia artificial para el ingreso de pacientes. Esto
-                permite gestionar necesidades de forma más práctica y eficiente
-                al momento de cargar turnos y dar ingreso a empleados para la
-                realización de exámenes de rutina.
+                Estamos implementando un software propio con App e inteligencia
+                artificial para la gestión de turnos, trazabilidad de datos y
+                estadísticas en tiempo real. Esto permite una administración más
+                ágil, ordenada y eficiente de los recursos, optimizando tiempos
+                y procesos.
               </p>
             </div>
             {/* Right - Image */}
@@ -217,9 +217,10 @@ export default function ComoTrabajamos() {
                 EXPERIENCIA SIN COMPLICACIONES
               </p>
               <p className="text-justify text-neutral-700 leading-relaxed">
-                Te ponemos en contacto al momento de la recepción con la persona
-                que tiene que atender tu petición, reduciendo el tiempo de
-                espera. No más call centers frustrantes.
+                Al contratar nuestros servicios, tendrás a disposición nuestras
+                clínicas para que tu personal pueda realizar sus exámenes en un
+                solo lugar, sin tener inconvenientes de traslados, tiempos de
+                espera, entre otros.
               </p>
             </div>
             {/* Right - Image */}
@@ -299,7 +300,7 @@ export default function ComoTrabajamos() {
             {/* Right - Image */}
             <div>
               <Image
-                src="/santacruz/futuro-5.png"
+                src="/santacruz/futuro-5-b.jpg"
                 alt="Comunicación"
                 width={0}
                 height={0}

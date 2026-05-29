@@ -33,12 +33,15 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
   });
 
   return (
-    <div {...swipeHandlers} className="relative flex items-center justify-center gap-10 px-4 cursor-grab active:cursor-grabbing">
+    <div
+      {...swipeHandlers}
+      className="relative flex items-center justify-center gap-10 xl:gap-6 px-4 cursor-grab active:cursor-grabbing"
+    >
       {/* Left peek image */}
       {images.length > 1 && (
         <button
           onClick={goToPrevious}
-          className="hidden lg:block relative h-[450px] w-[300px] overflow-hidden rounded-xl opacity-50 hover:opacity-70 transition-all duration-300 hover:scale-105 shadow-lg"
+          className="hidden lg:block relative h-[450px] w-[300px] xl:h-[350px] xl:w-[200px] overflow-hidden rounded-xl opacity-50 hover:opacity-70 transition-all duration-300 hover:scale-105 shadow-lg"
           aria-label="Previous image"
         >
           <Image
@@ -53,7 +56,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
       )}
 
       {/* Main image */}
-      <div className="relative h-[450px] md:h-[550px] w-full max-w-5xl overflow-hidden rounded-2xl shadow-2xl">
+      <div className="relative h-[450px] md:h-[550px] xl:h-[400px] w-full max-w-5xl overflow-hidden rounded-2xl shadow-2xl">
         <Image
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
@@ -68,7 +71,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
       {images.length > 1 && (
         <button
           onClick={goToNext}
-          className="hidden lg:block relative h-[450px] w-[300px] overflow-hidden rounded-xl opacity-50 hover:opacity-70 transition-all duration-300 hover:scale-105 shadow-lg"
+          className="hidden lg:block relative h-[450px] w-[300px] xl:h-[350px] xl:w-[200px] overflow-hidden rounded-xl opacity-50 hover:opacity-70 transition-all duration-300 hover:scale-105 shadow-lg"
           aria-label="Next image"
         >
           <Image
@@ -95,7 +98,9 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
                 setTimeout(() => setIsTransitioning(false), 500);
               }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-[color:var(--brand-orange)] scale-125" : "bg-neutral-400 hover:bg-neutral-500"
+                index === currentIndex
+                  ? "bg-[color:var(--brand-orange)] scale-125"
+                  : "bg-neutral-400 hover:bg-neutral-500"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

@@ -52,17 +52,17 @@ export function Header() {
                 alt="Santa Cruz O&G"
                 width={200}
                 height={70}
-                className="h-auto w-[180px] sm:w-[220px]"
+                className="h-auto w-[180px] sm:w-[220px] lg:w-[260px] xl:w-[220px]"
               />
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8 [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale] antialiased font-bold">
+            <nav className="hidden lg:flex items-center gap-6 lg:gap-7 xl:gap-6 [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale] antialiased font-bold">
               {menuLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-[11px] xl:text-xs uppercase tracking-[0.18em] transition-colors ${
+                  className={`text-[11px] lg:text-[13px] xl:text-xs uppercase tracking-[0.18em] transition-colors ${
                     link.label === "ACCESO CLIENTES"
                       ? "text-[#FF6600] hover:text-[#FF6600]/80"
                       : `hover:text-brand ${

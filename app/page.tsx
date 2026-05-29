@@ -195,14 +195,30 @@ export default function Home() {
                 align="left"
                 showDivider={true}
                 description={
-                  <p className="text-justify">
-                    Nuestra red de atención se potencia con convenios exclusivos
-                    con clínicas de referencia en Neuquén y con el Hospital
-                    Alemán en Buenos Aires para derivaciones de alta
-                    complejidad. Además, ofrecemos servicios de medicina
-                    offshore para cuencas marítimas y cobertura global para
-                    personal expatriado.
-                  </p>
+                  <div className="space-y-4">
+                    <p className="text-justify">
+                      Nuestra red de atención se potencia con convenios
+                      exclusivos con clínicas de referencia en Neuquén y con el
+                      Hospital Alemán en Buenos Aires para derivaciones de alta
+                      complejidad. Además, ofrecemos servicios de medicina
+                      offshore para cuencas marítimas y cobertura global para
+                      personal expatriado.
+                    </p>
+                    <a
+                      href="https://www.hospitalaleman.org.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Image
+                        src="/santacruz/logo-hosp-aleman.svg"
+                        alt="Hospital Alemán"
+                        width={60}
+                        height={40}
+                        className="h-[28px] w-auto"
+                      />
+                    </a>
+                  </div>
                 }
               />
             </div>
@@ -319,7 +335,7 @@ export default function Home() {
         <div className="bg-neutral-50 pt-32 sm:pt-36 pb-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
             <SectionHeading
-              title="Acompañamos a Empresas"
+              title="Acompañamos a Empresas Líderes"
               description={
                 <p>
                   Aliados en distintos países confían en nuestra capacidad de
