@@ -127,7 +127,7 @@ export default function Home() {
             <div className="space-y-4">
               <SectionHeading
                 eyebrow=""
-                title="Centros Médicos Propios (Neuquén Capital y Añelo Vaca Muerta)"
+                title="Centros Médicos Propios "
                 align="left"
                 showDivider={true}
                 description={
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             <div className="overflow-hidden shadow-lg">
               <Image
-                src="/santacruz/el-problema-v2.png"
+                src="/santacruz/el-problema-v3.png"
                 alt="El problema"
                 width={0}
                 height={0}
@@ -159,7 +159,7 @@ export default function Home() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
             <div className="overflow-hidden shadow-lg order-2 md:order-1">
               <Image
-                src="/santacruz/la-solucion-v2.png"
+                src="/santacruz/la-solucion-v3.png"
                 alt="La solución"
                 width={0}
                 height={0}
@@ -208,7 +208,7 @@ export default function Home() {
             </div>
             <div className="overflow-hidden shadow-lg">
               <Image
-                src="/santacruz/alianza.v2.png"
+                src="/santacruz/alianzav3.png"
                 alt="Capacitaciones"
                 width={0}
                 height={0}

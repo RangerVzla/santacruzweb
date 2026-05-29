@@ -47,21 +47,8 @@ export default function QuienesSomos() {
       {/* Team Photo & Origin */}
       <section className="bg-neutral-100 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-8">
-          <div className="relative">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
-              <Image
-                src="/santacruz/personal.png"
-                alt="Equipo Santa Cruz O&G"
-                fill
-                className="object-cover grayscale"
-                sizes="(min-width: 1024px) 1000px, 100vw"
-              />
-            </div>
-            {/* Vertical line from image to dot */}
-            <div className="absolute left-0 top-full w-px h-24 bg-[color:var(--brand-orange)]" />
-          </div>
-          <div className="mt-24 flex items-start gap-4">
-            <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0 -ml-[3px]" />
+          <div className="flex items-start gap-4">
+            <div className="h-2 w-2 rounded-full bg-[color:var(--brand-orange)] flex-shrink-0" />
             <p className="text-sm sm:text-base uppercase tracking-[0.12em] leading-relaxed text-justify">
               <span className="text-neutral-800 text-justify">
                 Santa Cruz O&G es una empresa nacida en Neuquén, Patagonia
@@ -82,7 +69,7 @@ export default function QuienesSomos() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src="/santacruz/quienes-somos-3.png"
+                src="/santacruz/quienes-somos-3b.png"
                 alt="Profesionales médicos"
                 fill
                 className="object-cover"
@@ -125,7 +112,7 @@ export default function QuienesSomos() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/santacruz/quienes-somos-4.png"
+                src="/santacruz/quienes-somos-4a.png"
                 alt="Doctor con paciente"
                 fill
                 className="object-cover"
@@ -162,6 +149,30 @@ export default function QuienesSomos() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Vimeo Video */}
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-10">
+          <SectionHeading title="Nuestras" highlight="Oficinas" />
+          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+            <iframe
+              src="https://player.vimeo.com/video/1196620389?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+              title="Oficinas_Santa_Cruz"
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
         </div>
       </section>
 
