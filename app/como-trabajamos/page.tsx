@@ -356,14 +356,11 @@ export default function ComoTrabajamos() {
         </div>
       </section>
 
-      {/* Grid Images Section */}
+      {/*
       <section className="bg-neutral-100 py-16 overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left - Images Grid */}
-            {/* Mobile: Simple 2-column grid, Desktop: Overlapping layout */}
             <div className="grid grid-cols-2 gap-4 md:relative md:h-[600px] md:block">
-              {/* Image 1 */}
               <div className="shadow-lg md:absolute md:top-0 md:-left-16 md:w-[65%] md:z-10">
                 <Image
                   src="/santacruz/grid-1.png"
@@ -374,7 +371,6 @@ export default function ComoTrabajamos() {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Image 2 */}
               <div className="shadow-lg md:absolute md:top-[20%] md:right-0 md:w-[70%] md:z-20">
                 <Image
                   src="/santacruz/grid-2.png"
@@ -385,7 +381,6 @@ export default function ComoTrabajamos() {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Image 3 */}
               <div className="shadow-lg col-span-2 md:absolute md:bottom-0 md:-left-16 md:w-[60%] md:z-10">
                 <Image
                   src="/santacruz/grid-3.png"
@@ -398,9 +393,7 @@ export default function ComoTrabajamos() {
               </div>
             </div>
 
-            {/* Right - Text Content */}
             <div className="space-y-6">
-              {/* Calendar Icon */}
               <svg
                 width="64"
                 height="64"
@@ -460,6 +453,7 @@ export default function ComoTrabajamos() {
           </div>
         </div>
       </section>
+      */}
     </main>
   );
 }

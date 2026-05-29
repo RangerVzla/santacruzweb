@@ -126,12 +126,12 @@ export default function QuienesSomos() {
       <section className="bg-neutral-100 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
+            <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src="/santacruz/quienes-somos-5.png"
+                src="/santacruz/quienes-somos-5a.png"
                 alt="Imagen quienes somos 5"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
             </div>
