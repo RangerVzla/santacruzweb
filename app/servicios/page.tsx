@@ -68,41 +68,50 @@ export default function Servicios() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="relative aspect-4/5 overflow-hidden">
               <Image
-                src="/santacruz/servicios-2.png"
+                src="/santacruz/servicios-2a.png"
                 alt="Medicina laboral en campo"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
             </div>
             <div className="space-y-8">
               <div className="space-y-4">
-                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
+                <h2 className="text-xl font-bold uppercase tracking-[0.2em] text-neutral-900">
                   Servicio médico en áreas remotas
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
-                  Llevamos lo que necesites en tu operación Equipos médicos
-                  completos desplegados directamente in situ
                 </h2>
+                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
+                  Llevamos lo que necesites en tu operación
+                </span>
               </div>
               <div className="h-[2px] w-full bg-brand" />
               <div className="space-y-6">
                 <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
                     Médico Director, Médico de Campo y Asistente Coordinador
                   </h3>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
                     Unidades Móviles de Alta Complejidad (ambulancias 4X4
-                    totalmente equipadas como Clase “A”)
+                    totalmente equipadas como Clase "A")
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Convenios exclusivos con clínicas de alta complejidad en
+                    Neuquén Capital y Hospital Alemán en Buenos Aires.
+                  </h3>
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Llevamos lo que necesites en tu operación Equipos médicos
+                    completos desplegados directamente in situ
                   </h3>
                   {/* <p className="text-sm text-neutral-600">
                     Exámenes preocupacionales, periódicos y preventivos
                   </p> */}
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
                     Consultorios en campo con sistemas de comunicación
                     integrados (Starlink, radiocomunicación)
                   </h3>
@@ -130,7 +139,7 @@ export default function Servicios() {
                   Tecnología en áreas remotas
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
-                  Centro de diagnóstico (portátil)
+                  Centro de diagnóstico médico (portátil)
                 </h2>
               </div>
               <div className="h-[2px] w-full bg-brand" />
@@ -237,6 +246,222 @@ export default function Servicios() {
         </div>
       </section>
 
+      {/* Medicina laboral (imagen derecha) */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
+                  Prevención y excelencia en cada examen
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                  Medicina laboral
+                </h2>
+              </div>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Exámenes preocupacionales, periódicos y de egreso
+                  </h3>
+                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Controles toxicológicos
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Accidentología (ART)
+                  </h3>
+                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Vacunatorio Clinica Parque Industrial Neuquén
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Depósito de Medicamentos en Clínica Añelo
+                  </h3>
+                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Asesoramiento integral y capacitación especializada
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Servicios médico-legales y epidemiología laboral
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Auditorías médicas y actividades integradas de seguridad
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Juntas médicas y procedimientos internos especializados
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/santacruz/servicios-4b.png"
+                alt="Protección integral de la salud"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sector VIP para ejecutivos */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/santacruz/servicios-6.png"
+                alt="Sector VIP para ejecutivos"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
+                  Porque tu tiempo es valioso.
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                  Sector VIP para ejecutivos
+                </h2>
+              </div>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Sala Lounge exclusiva con servicio de café, refrigerios,
+                    snacks y WIFI
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Máximo confort y comodidad
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Protocolos optimizados para agendas ejecutivas ajustadas
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Seguimiento completo desde llegada hasta partida
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Prioridad sin demoras ni esperas
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Alcohol y drogas */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                  Alcohol y drogas
+                </h2>
+              </div>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Programas de prevención laboral
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Testeos de droga (saliva, orina y sangre)
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Testeos de alcohol (saliva, orina, sangre y aire espirado)
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/santacruz/servicios-8.png"
+                alt="Alcohol y drogas"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Programa de prevención y soporte cardiovascular */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/santacruz/servicios-7.png"
+                alt="Programa de prevención y soporte cardiovascular"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                  Programa de prevención y soporte cardiovascular
+                </h2>
+              </div>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Evaluación de riesgos
+                  </h3>
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    Respaldo especializado
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Cobertura Global Section */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
@@ -286,12 +511,47 @@ export default function Servicios() {
             </div>
             <div className="relative aspect-4/5 overflow-hidden order-1 md:order-2">
               <Image
-                src="/santacruz/servicios-5.png"
+                src="/santacruz/servicios-5a.png"
                 alt="Cobertura global y especializada"
+                fill
+                className="object-contain"
+                sizes="(min-width: 1024px) 600px, 100vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Capacitaciones */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="relative aspect-4/5 overflow-hidden">
+              <Image
+                src="/santacruz/servicios-10.png"
+                alt="Capacitaciones"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
+            </div>
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                  Capacitaciones en prevención y respuesta
+                </h2>
+              </div>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <p className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                  Formamos equipos en primeros auxilios, RCP y actuación ante
+                  emergencias, con contenidos adaptados a las exigencias del
+                  sector energético.
+                </p>
+              </div>
             </div>
           </div>
         </div>
