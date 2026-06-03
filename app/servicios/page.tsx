@@ -66,7 +66,7 @@ export default function Servicios() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="relative aspect-4/5 overflow-hidden">
+            <div className="relative aspect-4/5 overflow-hidden md:order-2">
               <Image
                 src="/santacruz/servicios-2a.png"
                 alt="Medicina laboral en campo"
@@ -94,7 +94,7 @@ export default function Servicios() {
                 <div className="space-y-1">
                   <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
                     Unidades Móviles de Alta Complejidad (ambulancias 4X4
-                    totalmente equipadas como Clase "A")
+                    totalmente equipadas como Clase &quot;A&quot;)
                   </h3>
                 </div>
                 <div className="space-y-1">
@@ -133,7 +133,7 @@ export default function Servicios() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8">
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="space-y-8 order-2 md:order-1">
+            <div className="space-y-8 order-2">
               <div className="space-y-4">
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Tecnología en áreas remotas
@@ -173,7 +173,7 @@ export default function Servicios() {
                 Más información
               </button> */}
             </div>
-            <div className="relative aspect-square overflow-hidden order-1 md:order-2">
+            <div className="relative aspect-square overflow-hidden order-1">
               <Image
                 src="/santacruz/servicios-3-b.png"
                 alt="Centro de diagnóstico portátil"
@@ -186,65 +186,67 @@ export default function Servicios() {
         </div>
       </section>
 
-      {/* Protección Integral de la Salud Section */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8">
-          <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="relative aspect-4/5 overflow-hidden">
-              <Image
-                src="/santacruz/servicios-4.png"
-                alt="Protección integral de la salud"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 600px, 100vw"
-              />
-            </div>
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
-                  Servicios cardiovasculares y prevención
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
-                  Protección integral de la salud
-                </h2>
+      {/* Protección Integral de la Salud Section (comentada) */}
+      {false && (
+        <section className="bg-white py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-8">
+            <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+              <div className="relative aspect-4/5 overflow-hidden">
+                <Image
+                  src="/santacruz/servicios-4.png"
+                  alt="Protección integral de la salud"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 600px, 100vw"
+                />
               </div>
-              <div className="flex items-center gap-0">
-                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
-                <div className="h-[2px] flex-1 bg-brand" />
-              </div>
-              <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Programa de prevención cardiovascular
-                  </h3>
-                  <p className="text-sm text-neutral-600">
-                    Evaluación de riesgos especializada
-                  </p>
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
+                    Servicios cardiovasculares y prevención
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase">
+                    Protección integral de la salud
+                  </h2>
                 </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Tests de alcohol y drogas
-                  </h3>
-                  <p className="text-sm text-neutral-600">
-                    Programas de prevención laboral
-                  </p>
+                <div className="flex items-center gap-0">
+                  <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                  <div className="h-[2px] flex-1 bg-brand" />
                 </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
-                    Red de soporte cardiovascular
-                  </h3>
-                  <p className="text-sm text-neutral-600">
-                    Respaldo inmediato especializado
-                  </p>
+                <div className="space-y-6">
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                      Programa de prevención cardiovascular
+                    </h3>
+                    <p className="text-sm text-neutral-600">
+                      Evaluación de riesgos especializada
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                      Tests de alcohol y drogas
+                    </h3>
+                    <p className="text-sm text-neutral-600">
+                      Programas de prevención laboral
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-brand">
+                      Red de soporte cardiovascular
+                    </h3>
+                    <p className="text-sm text-neutral-600">
+                      Respaldo inmediato especializado
+                    </p>
+                  </div>
                 </div>
-              </div>
-              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
+                {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
                                     Más información
                                   </button> */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Medicina laboral (imagen derecha) */}
       <section className="bg-white py-16">
@@ -553,6 +555,84 @@ export default function Servicios() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Especialidades Médicas Disponibles */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-8 space-y-12">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] text-black uppercase text-center">
+            Especialidades médicas disponibles:
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {[
+              {
+                label: "Medicina",
+                image: "/santacruz/especialidades/medicina.png",
+              },
+              {
+                label: "Cardiología",
+                image: "/santacruz/especialidades/cardiologia.png",
+              },
+              {
+                label: "Emergencias",
+                image: "/santacruz/especialidades/emergencias.png",
+              },
+              {
+                label: "Psicotécnicos",
+                image: "/santacruz/especialidades/psicotecnicos.png",
+              },
+              {
+                label: "Medicina Preventiva",
+                image: "/santacruz/especialidades/preventiva.png",
+              },
+              {
+                label: "Toxicología",
+                image: "/santacruz/especialidades/toxicologia.png",
+              },
+              {
+                label: "Oftalmología",
+                image: "/santacruz/especialidades/oftalmologia.png",
+              },
+              {
+                label: "Radiología",
+                image: "/santacruz/especialidades/radiologia.png",
+              },
+              {
+                label: "Medicina Offshore/Marítima",
+                image: "/santacruz/especialidades/maritima.png",
+              },
+              {
+                label: "Laboratorio",
+                image: "/santacruz/especialidades/laboratorio.png",
+              },
+            ].map((specialty, index) => (
+              <div key={index} className="flex flex-col">
+                {/* Image */}
+                <div className="relative h-48 sm:h-56 overflow-hidden">
+                  <Image
+                    src={specialty.image}
+                    alt={specialty.label}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 20vw, (min-width: 640px) 33vw, 50vw"
+                  />
+                </div>
+
+                {/* Label with vertical line and dot */}
+                <div className="flex pt-6">
+                  {/* Vertical line with dot */}
+                  <div className="flex flex-col items-center mr-3">
+                    <div className="w-[2px] h-14 bg-brand" />
+                    <div className="w-2 h-2 rounded-full bg-brand shrink-0" />
+                  </div>
+                  <p className="text-xs sm:text-sm uppercase tracking-[0.12em] text-neutral-800 leading-tight pt-12">
+                    {specialty.label}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

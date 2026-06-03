@@ -217,16 +217,16 @@ export default function ComoTrabajamos() {
                 EXPERIENCIA SIN COMPLICACIONES
               </p>
               <p className="text-justify text-neutral-700 leading-relaxed">
-                Al contratar nuestros servicios, tendrás a disposición nuestras
+                Al contratar nuestros servicios, tenés a disposición nuestras
                 clínicas para que tu personal pueda realizar sus exámenes en un
-                solo lugar, sin tener inconvenientes de traslados, tiempos de
-                espera, entre otros.
+                solo lugar. Rapidez, prevención activa y cercanía, sin tener
+                inconvenientes de traslados ni tiempos de espera.
               </p>
             </div>
             {/* Right - Image */}
             <div>
               <Image
-                src="/santacruz/futuro-3-b.png"
+                src="/santacruz/futuro-3-c.png"
                 alt="Practicidad"
                 width={0}
                 height={0}

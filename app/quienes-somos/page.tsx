@@ -128,7 +128,7 @@ export default function QuienesSomos() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src="/santacruz/quienes-somos-5a.png"
+                src="/santacruz/quienes-somos-5b.png"
                 alt="Imagen quienes somos 5"
                 fill
                 className="object-contain"

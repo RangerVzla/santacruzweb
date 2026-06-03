@@ -24,6 +24,7 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
   const menuItems = [
     { label: "QUIÉNES SOMOS", href: "/quienes-somos" },
     { label: "SERVICIOS", href: "/servicios" },
+    { label: "SERVICIOS INTERIOR", href: "/servicios-interior" },
     { label: "CÓMO TRABAJAMOS", href: "/como-trabajamos" },
     { label: "CONTACTO", href: "/contacto" },
     {
