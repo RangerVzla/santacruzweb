@@ -55,7 +55,7 @@ export function Footer() {
                 Oficinas Comerciales
               </h3>
               <p>
-                Teniente de Navío Eliana Krawczyk 685, Edificio Ámbar 2do Piso
+                Teniente de Navío Eliana Krawczyk 685, Edificio Ámbar 2do
                 &quot;B&quot; - Isla 132, Neuquén, Capital
               </p>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -13,20 +14,42 @@ const orangeMarkerSvg = `
 </svg>
 `;
 
-const customIcon = new L.Icon({
-  iconUrl: `data:image/svg+xml;base64,${btoa(orangeMarkerSvg)}`,
-  iconSize: [24, 36],
-  iconAnchor: [12, 36],
-  popupAnchor: [0, -36],
-});
-
 export default function LocationMap({ locations }: LocationMapProps) {
+  const mapRef = useRef<L.Map | null>(null);
+
+  // Create icon inside component to avoid SSR issues with btoa
+  const customIcon = useMemo(
+    () =>
+      new L.Icon({
+        iconUrl: `data:image/svg+xml;base64,${btoa(orangeMarkerSvg)}`,
+        iconSize: [24, 36],
+        iconAnchor: [12, 36],
+        popupAnchor: [0, -36],
+      }),
+    [],
+  );
+
+  // Clean up previous map instance on unmount (fixes Strict Mode double-mount error)
+  useEffect(() => {
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+    };
+  }, []);
+
   // Calculate center point between all locations
-  const centerLat = locations.reduce((sum, loc) => sum + loc.coordinates[0], 0) / locations.length;
-  const centerLng = locations.reduce((sum, loc) => sum + loc.coordinates[1], 0) / locations.length;
+  const centerLat =
+    locations.reduce((sum, loc) => sum + loc.coordinates[0], 0) /
+    locations.length;
+  const centerLng =
+    locations.reduce((sum, loc) => sum + loc.coordinates[1], 0) /
+    locations.length;
 
   return (
     <MapContainer
+      ref={mapRef}
       center={[centerLat, centerLng]}
       zoom={9}
       scrollWheelZoom={false}
@@ -44,7 +67,10 @@ export default function LocationMap({ locations }: LocationMapProps) {
               <p className="text-orange-600">{location.city}</p>
               <p className="text-neutral-600">{location.address}</p>
               <p className="text-neutral-700 mt-1">
-                <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="hover:text-orange-600">
+                <a
+                  href={`tel:${location.phone.replace(/\s/g, "")}`}
+                  className="hover:text-orange-600"
+                >
                   📞 {location.phone}
                 </a>
               </p>
