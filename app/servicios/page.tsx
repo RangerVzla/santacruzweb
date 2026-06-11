@@ -500,7 +500,7 @@ export default function Servicios() {
                     Servicios médicos offshore
                   </h3>
                   <p className="text-sm text-neutral-600 text-justify">
-                    Únicos en Argentina para cuencas marítimas
+                    En Argentina para cuencas marítimas
                   </p>
                 </div>
                 <div className="space-y-1">

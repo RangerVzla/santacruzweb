@@ -62,7 +62,7 @@ export default function ComoTrabajamos() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1.1fr] items-center">
             <div className="overflow-hidden shadow-lg order-2 md:order-1">
               <Image
-                src="/santacruz/trabajamos-2-b.png"
+                src="/santacruz/trabajamos-2-c.png"
                 alt="Lo que otros no pueden ofrecerte"
                 width={0}
                 height={0}

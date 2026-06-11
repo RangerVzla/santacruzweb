@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
@@ -9,13 +8,19 @@ export function Footer() {
     <footer className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <Image
-          src="/santacruz/bg-techno.jpg"
-          alt="Conexiones"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/santacruz/bg-techno.jpg"
+        >
+          <source src="/santacruz/fondo_footer.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/70 to-black/90" />
       </div>
 
