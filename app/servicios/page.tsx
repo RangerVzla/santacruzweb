@@ -594,7 +594,7 @@ export default function Servicios() {
               },
               {
                 label: "Toxicología",
-                image: "/santacruz/especialidades/toxicologia.png",
+                image: "/santacruz/especialidades/toxicologia-1a.png",
               },
               {
                 label: "Oftalmología",
