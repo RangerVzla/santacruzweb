@@ -93,10 +93,10 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-[0.08em] text-white uppercase">
               Implementa el servicio de medicina más eficiente para tu empresa
             </h1>
-            <p className="text-justify text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
+            <p className="text-justify text-sm sm:text-base uppercase tracking-[0.12em] text-white/90">
               gracias a alianzas estratégicas a nivel nacional e internacional
             </p>
-            <div className="pt-4">
+            <div className="pt-4 hidden">
               <CTAButton label="CÓMO LO HACEMOS" variant="primary" />
             </div>
           </div>
@@ -134,14 +134,14 @@ export default function Home() {
                 showDivider={true}
                 description={
                   <p className="text-justify">
-                    Contamos con Clínicas estratégicamente ubicadas en Neuquén y
-                    Añelo (Vaca Muerta), totalmente equipadas para brindar la
+                    Nuestras Clínicas están estratégicamente ubicadas en Neuquén
+                    y Añelo (Vaca Muerta), totalmente equipadas para brindar la
                     atención médica a empresas. Realizamos exámenes
                     preocupacionales, periódicos y de egreso, controles
                     toxicológicos, accidentes (ART) y atención clínica general.
                     Contamos con vacunatorio, depósito de medicamentos y
-                    espacios exclusivos para ejecutivos. Contamos con convenios
-                    con todas las ART.
+                    espacios exclusivos para ejecutivos. Poseemos convenios con
+                    todas las ART.
                   </p>
                 }
               />
@@ -273,7 +273,7 @@ export default function Home() {
                     <div className="text-4xl font-light text-brand">
                       {card.number}
                     </div>
-                    <p className="text-sm leading-relaxed text-neutral-700">
+                    <p className="text-sm leading-relaxed text-neutral-700 text-justify">
                       {card.copy}
                     </p>
                   </div>
@@ -281,7 +281,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex justify-center">
+          <div className="hidden">
             <CTAButton label="Saber más" variant="outline" />
           </div>
         </div>

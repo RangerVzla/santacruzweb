@@ -75,55 +75,41 @@ export default function Servicios() {
                 sizes="(min-width: 1024px) 600px, 100vw"
               />
             </div>
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.08em] uppercase text-justify">
-                  Servicio médico en áreas remotas
-                </h2>
-                <span className="text-xs uppercase tracking-[0.2em] text-neutral-800 text-justify">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Llevamos lo que necesites en tu operación
                 </span>
+                <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.08em] uppercase text-left">
+                  Servicio médico en áreas remotas
+                </h2>
               </div>
-              <div className="h-[1px] w-full bg-brand" />
-              <div className="space-y-3">
-                <div className="space-y-0.5">
-                  <h3 className="text-xs uppercase tracking-[0.12em] text-neutral-900 text-justify">
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
+              </div>
+              <div className="space-y-6">
+                <ul className="text-xs sm:text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>
                     Médico Director, Médico de Campo y Asistente Coordinador
-                  </h3>
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-xs uppercase tracking-[0.12em] text-neutral-900 text-justify">
+                  </li>
+                  <li>
                     Unidades Móviles de Alta Complejidad (ambulancias 4X4
                     totalmente equipadas como Clase &quot;A&quot;)
-                  </h3>
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-xs uppercase tracking-[0.12em] text-neutral-900 text-justify">
+                  </li>
+                  <li>
                     Convenios exclusivos con clínicas de alta complejidad en
-                    Neuquén Capital y Hospital Alemán en Buenos Aires.
-                  </h3>
-                  <h3 className="text-xs uppercase tracking-[0.12em] text-neutral-900 text-justify">
-                    Llevamos lo que necesites en tu operación Equipos médicos
-                    completos desplegados directamente in situ
-                  </h3>
-                  {/* <p className="text-sm text-neutral-600">
-                    Exámenes preocupacionales, periódicos y preventivos
-                  </p> */}
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-xs uppercase tracking-[0.12em] text-neutral-900 text-justify">
+                    Neuquén Capital y Hospital Alemán en Buenos Aires
+                  </li>
+                  <li>
+                    Equipos médicos completos desplegados directamente in situ
+                  </li>
+                  <li>
                     Consultorios en campo con sistemas de comunicación
                     integrados (Starlink, radiocomunicación)
-                  </h3>
-                  {/*
-                  <p className="text-sm text-neutral-600">
-                    Atención exclusiva en sala lounge premium
-                  </p>*/}
-                </div>
+                  </li>
+                </ul>
               </div>
-              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                                    Más información
-                                  </button> */}
             </div>
           </div>
         </div>
@@ -138,40 +124,26 @@ export default function Servicios() {
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Tecnología en áreas remotas
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Centro de diagnóstico médico (portátil)
                 </h2>
               </div>
-              <div className="h-[2px] w-full bg-brand" />
-              <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Telemedicina
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Iriscopio
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Ecógrafo
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Otoscopio
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Cámara de inspección
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Estetoscopio digital
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  Dermatoscopio
-                </p>
-                <p className="text-xs uppercase tracking-[0.06em] sm:tracking-[0.12em] text-neutral-800">
-                  E.C.G y otros
-                </p>
+              <div className="flex items-center gap-0">
+                <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
               </div>
-              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                Más información
-              </button> */}
+              <div className="space-y-6">
+                <ul className="text-xs sm:text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand grid grid-cols-2 gap-x-4">
+                  <li>Telemedicina</li>
+                  <li>Iriscopio</li>
+                  <li>Ecógrafo</li>
+                  <li>Otoscopio</li>
+                  <li>Cámara de inspección</li>
+                  <li>Estetoscopio digital</li>
+                  <li>Dermatoscopio</li>
+                  <li>E.C.G y otros</li>
+                </ul>
+              </div>
             </div>
             <div className="relative aspect-square overflow-hidden order-1">
               <Image
@@ -257,7 +229,7 @@ export default function Servicios() {
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Prevención y excelencia en cada examen
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Medicina laboral
                 </h2>
               </div>
@@ -266,50 +238,22 @@ export default function Servicios() {
                 <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Exámenes preocupacionales, periódicos y de egreso
-                  </h3>
-                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900 text-justify">
-                    Controles toxicológicos
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Accidentología (ART)
-                  </h3>
-                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900 text-justify">
-                    Vacunatorio Clinica Parque Industrial Neuquén
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Depósito de Medicamentos en Clínica Añelo
-                  </h3>
-                  <p className="text-sm uppercase tracking-[0.12em] text-neutral-900 text-justify">
-                    Asesoramiento integral y capacitación especializada
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Servicios médico-legales y epidemiología laboral
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>Exámenes preocupacionales, periódicos y de egreso</li>
+                  <li>Controles toxicológicos</li>
+                  <li>Accidentología (ART)</li>
+                  <li>Vacunatorio Clínica Parque Industrial Neuquén</li>
+                  <li>Depósito de medicamentos en Clínica Añelo</li>
+                  <li>Asesoramiento integral y capacitación especializada</li>
+                  <li>Servicios médico-legales y epidemiología laboral</li>
+                  <li>
                     Auditorías médicas y actividades integradas de seguridad
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                  </li>
+                  <li>
                     Juntas médicas y procedimientos internos especializados
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Laboratorios propios en Neuquén y Añelo
-                  </h3>
-                </div>
+                  </li>
+                  <li>Laboratorios propios en Neuquén y Añelo</li>
+                </ul>
               </div>
             </div>
             <div className="relative aspect-4/5 overflow-hidden">
@@ -343,7 +287,7 @@ export default function Servicios() {
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Porque tu tiempo es valioso.
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify whitespace-nowrap">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Sector VIP para ejecutivos
                 </h2>
               </div>
@@ -352,32 +296,18 @@ export default function Servicios() {
                 <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>
                     Sala Lounge exclusiva con servicio de café, refrigerios,
                     snacks y WIFI
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Máximo confort y comodidad
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                  </li>
+                  <li>Máximo confort y comodidad</li>
+                  <li>
                     Protocolos optimizados para agendas ejecutivas ajustadas
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Seguimiento completo desde llegada hasta partida
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Prioridad sin demoras ni esperas
-                  </h3>
-                </div>
+                  </li>
+                  <li>Seguimiento completo desde llegada hasta partida</li>
+                  <li>Prioridad sin demoras ni esperas</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -390,7 +320,7 @@ export default function Servicios() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Alcohol y drogas
                 </h2>
               </div>
@@ -399,21 +329,13 @@ export default function Servicios() {
                 <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Programas de prevención laboral
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Testeos de droga (saliva, orina y sangre)
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>Programas de prevención laboral</li>
+                  <li>Testeos de droga (saliva, orina y sangre)</li>
+                  <li>
                     Testeos de alcohol (saliva, orina, sangre y aire espirado)
-                  </h3>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="relative aspect-4/5 overflow-hidden">
@@ -444,7 +366,7 @@ export default function Servicios() {
             </div>
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Programa de prevención y soporte cardiovascular
                 </h2>
               </div>
@@ -453,16 +375,10 @@ export default function Servicios() {
                 <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Evaluación de riesgos
-                  </h3>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
-                    Respaldo especializado
-                  </h3>
-                </div>
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>Evaluación de riesgos</li>
+                  <li>Respaldo especializado</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -478,43 +394,36 @@ export default function Servicios() {
                 <span className="text-sm uppercase tracking-[0.2em] text-neutral-800">
                   Servicios internacionales
                 </span>
-                <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.04em] uppercase text-justify whitespace-nowrap">
+                <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.04em] uppercase text-left">
                   Cobertura global y especializada
                 </h2>
               </div>
               <div className="flex items-center gap-0">
-                <div className="h-[2px] flex-1 bg-brand" />
                 <div className="h-2 w-2 rounded-full bg-brand shrink-0" />
+                <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand">
+                  <li>
                     Evacuaciones y repatriaciones
-                  </h3>
-                  <p className="text-sm text-neutral-600 text-justify">
-                    Alianza internacional especializada
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    <span className="block normal-case text-xs text-neutral-500 mt-0.5">
+                      Alianza internacional especializada
+                    </span>
+                  </li>
+                  <li>
                     Servicios médicos offshore
-                  </h3>
-                  <p className="text-sm text-neutral-600 text-justify">
-                    En Argentina para cuencas marítimas
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm uppercase tracking-[0.12em] text-neutral-900">
+                    <span className="block normal-case text-xs text-neutral-500 mt-0.5">
+                      En Argentina para cuencas marítimas
+                    </span>
+                  </li>
+                  <li>
                     Cobertura para personal expatriado
-                  </h3>
-                  <p className="text-sm text-neutral-600 text-justify">
-                    Protocolos internacionales
-                  </p>
-                </div>
+                    <span className="block normal-case text-xs text-neutral-500 mt-0.5">
+                      Protocolos internacionales
+                    </span>
+                  </li>
+                </ul>
               </div>
-              {/* <button className="border border-neutral-300 rounded-full px-8 py-3 text-xs uppercase tracking-[0.15em] hover:bg-neutral-100 transition-colors">
-                                    Más información
-                                  </button> */}
             </div>
             <div className="relative aspect-4/5 overflow-hidden order-1 md:order-2">
               <Image
@@ -544,7 +453,7 @@ export default function Servicios() {
             </div>
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-justify">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-[0.08em] uppercase text-left">
                   Capacitaciones en prevención y respuesta
                 </h2>
               </div>
@@ -553,11 +462,13 @@ export default function Servicios() {
                 <div className="h-[2px] flex-1 bg-brand" />
               </div>
               <div className="space-y-6">
-                <p className="text-sm uppercase tracking-[0.12em] text-neutral-900 text-justify">
-                  Formamos equipos en primeros auxilios, RCP y actuación ante
-                  emergencias, con contenidos adaptados a las exigencias del
-                  sector energético.
-                </p>
+                <ul className="text-sm uppercase tracking-wider text-neutral-800 text-justify leading-normal pl-5 list-disc list-outside marker:text-brand">
+                  <li>
+                    Formamos equipos en primeros auxilios, RCP y actuación ante
+                    emergencias, con contenidos adaptados a las exigencias del
+                    sector energético.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

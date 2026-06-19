@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import type { ImageCarouselProps } from "./types";
 
@@ -9,19 +9,35 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     setTimeout(() => setIsTransitioning(false), 500);
-  };
+  }, [isTransitioning, images.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     setTimeout(() => setIsTransitioning(false), 500);
-  };
+  }, [isTransitioning, images.length]);
+
+  // Auto-play with pause on hover
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (images.length <= 1 || isHovered) return;
+
+    intervalRef.current = setInterval(() => {
+      goToNext();
+    }, 2300);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [isHovered, goToNext, images.length]);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => goToNext(),
@@ -36,6 +52,8 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
     <div
       {...swipeHandlers}
       className="relative flex items-center justify-center gap-10 xl:gap-6 px-4 cursor-grab active:cursor-grabbing"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Left peek image */}
       {images.length > 1 && (

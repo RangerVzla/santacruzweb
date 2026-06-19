@@ -161,13 +161,19 @@ export default function ContactoPage() {
 
       {/* Contact Form Section */}
       <section className="relative py-16 overflow-hidden">
-        <Image
-          src="/santacruz/bg-techno.jpg"
-          alt="Background"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/santacruz/bg-techno.jpg"
+        >
+          <source src="/santacruz/fondo_footer.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-8">
           {/* Intro text */}

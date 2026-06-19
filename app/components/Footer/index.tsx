@@ -21,7 +21,7 @@ export function Footer() {
         >
           <source src="/santacruz/fondo_footer.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/70 to-black/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/30 to-black/50" />
       </div>
 
       {/* Main Content */}

@@ -5,7 +5,6 @@ export const clientLogos: Logo[] = [
   { src: "/santacruz/logo-dls-archer-1.png", alt: "DLS Archer" },
   { src: "/santacruz/logo-halliburton-1.png", alt: "Halliburton" },
   { src: "/santacruz/logo-astra-1.png", alt: "Astra" },
-  { src: "/santacruz/logo-internationalsos-1.png", alt: "International SOS" },
   { src: "/santacruz/logo-hp-1.png", alt: "H&P" },
   { src: "/santacruz/logo-wellfield-1.png", alt: "Wellfield" },
   { src: "/santacruz/logo-pluspetrol-1.png", alt: "Pluspetrol" },
