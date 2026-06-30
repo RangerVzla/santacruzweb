@@ -3,6 +3,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useState, FormEvent } from "react";
+import type { Location } from "../components/LocationMap/types";
 
 // Dynamic import for Leaflet (requires window object)
 const LocationMap = dynamic(
@@ -37,28 +38,51 @@ type FormErrors = {
   consentimiento?: string;
 };
 
-const contactInfo = {
-  email: "admin@santacruzoyg.com.ar",
-  phones: [
-    { label: "Cel Clínica Neuquén", number: "+54 299 456 8069" },
-    { label: "Cel Clínica Añelo", number: "+54 299 457 3405" },
-  ],
-};
-
-const locations = [
+const clinicas = [
   {
-    name: "CLÍNICA SANTA CRUZ O&G SRL",
-    city: "NEUQUÉN",
-    address: "El Topacio 3275, Q8300 Neuquén Parque Industrial Oeste",
+    id: "neuquen",
+    name: "Neuquén Capital",
+    address: "El Topacio 3275 - Parque Industrial Oeste, Neuquén",
+    phoneLabel: "Cel Clínica Neuquén",
     phone: "+54 299 456 8069",
     coordinates: [-38.9516, -68.0591] as [number, number],
   },
   {
-    name: "CLÍNICA SANTA CRUZ O&G",
-    city: "AÑELO, NEUQUÉN",
-    address: "Av. Primeros Pobladores S/N Lote B1c",
+    id: "anelo",
+    name: "Añelo (Vaca Muerta)",
+    address:
+      "Av. Primeros Pobladores S/N, Lote B1C, Añelo, Provincia de Neuquén",
+    phoneLabel: "Cel Clínica Añelo",
     phone: "+54 299 457 3405",
     coordinates: [-38.3489, -68.7872] as [number, number],
+  },
+];
+
+const oficinaComercial = {
+  address:
+    'Teniente de Navío Eliana Krawczyk 685, Edificio Ámbar 2do "B" - Isla 132, Neuquén, Capital',
+  email: "admin@santacruzoyg.com.ar",
+  phoneLabel: "Cel comercial",
+  phone: "299 476 5704",
+  whatsapp: "5492994765704",
+  coordinates: [-38.978044, -68.050751] as [number, number],
+};
+
+// Locations for the interactive map (clinics + commercial office)
+const locations: Location[] = [
+  ...clinicas.map((clinica) => ({
+    name: `Clínica Santa Cruz O&G — ${clinica.name}`,
+    city: clinica.name,
+    address: clinica.address,
+    phone: clinica.phone,
+    coordinates: clinica.coordinates,
+  })),
+  {
+    name: "Oficinas Comerciales",
+    city: "Neuquén Capital",
+    address: oficinaComercial.address,
+    phone: oficinaComercial.phone,
+    coordinates: oficinaComercial.coordinates,
   },
 ];
 
@@ -341,47 +365,73 @@ export default function ContactoPage() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2">
             {/* Left Column - Contact Info */}
             <div className="space-y-12">
-              {/* General Contact */}
-              <div className="space-y-4">
+              {/* Clínicas */}
+              <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-semibold uppercase tracking-[0.12em] text-black">
-                    Información de Contacto
+                    Clínicas
                   </h3>
                   <div className="flex items-center gap-2 mt-3">
                     <div className="flex-1 h-[2px] bg-[color:var(--brand-orange)]" />
                     <div className="w-3 h-3 rounded-full bg-[color:var(--brand-orange)]" />
                   </div>
                 </div>
-                <div className="space-y-2 text-neutral-700 mt-6">
-                  <p>mail: {contactInfo.email}</p>
-                  {contactInfo.phones.map((phone) => (
-                    <p key={phone.number}>
-                      {phone.label}: {phone.number}
+                {clinicas.map((clinica) => (
+                  <div key={clinica.id} className="space-y-1">
+                    <p className="text-[color:var(--brand-orange)] font-medium uppercase tracking-[0.08em]">
+                      {clinica.name}
                     </p>
-                  ))}
-                </div>
+                    <p className="text-neutral-700">{clinica.address}</p>
+                    <p className="text-neutral-700">
+                      {clinica.phoneLabel}:{" "}
+                      <a
+                        href={`tel:${clinica.phone.replace(/\s/g, "")}`}
+                        className="hover:text-[color:var(--brand-orange)]"
+                      >
+                        {clinica.phone}
+                      </a>
+                    </p>
+                  </div>
+                ))}
               </div>
 
-              {/* Locations */}
-              {locations.map((location, index) => (
-                <div key={index} className="space-y-4">
-                  <div>
-                    <h3 className="text-2xl font-semibold uppercase tracking-[0.12em] text-black">
-                      {location.name}
-                    </h3>
-                    <div className="flex items-center gap-2 mt-3">
-                      <div className="flex-1 h-[2px] bg-[color:var(--brand-orange)]" />
-                      <div className="w-3 h-3 rounded-full bg-[color:var(--brand-orange)]" />
-                    </div>
-                  </div>
-                  <div className="space-y-2 mt-2">
-                    <p className="text-[color:var(--brand-orange)] font-medium uppercase tracking-[0.08em]">
-                      {location.city}
-                    </p>
-                    <p className="text-neutral-700">{location.address}</p>
+              {/* Oficinas Comerciales */}
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-2xl font-semibold uppercase tracking-[0.12em] text-black">
+                    Oficinas Comerciales
+                  </h3>
+                  <div className="flex items-center gap-2 mt-3">
+                    <div className="flex-1 h-[2px] bg-[color:var(--brand-orange)]" />
+                    <div className="w-3 h-3 rounded-full bg-[color:var(--brand-orange)]" />
                   </div>
                 </div>
-              ))}
+                <div className="space-y-2 text-neutral-700 mt-2">
+                  <p className="text-[color:var(--brand-orange)] font-medium uppercase tracking-[0.08em]">
+                    PASEO DE LA COSTA
+                  </p>
+                  <p>{oficinaComercial.address}</p>
+                  <p>
+                    <a
+                      href={`mailto:${oficinaComercial.email}`}
+                      className="hover:text-[color:var(--brand-orange)]"
+                    >
+                      {oficinaComercial.email}
+                    </a>
+                  </p>
+                  <p>
+                    {oficinaComercial.phoneLabel}:{" "}
+                    <a
+                      href={`https://wa.me/${oficinaComercial.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[color:var(--brand-orange)]"
+                    >
+                      {oficinaComercial.phone}
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Right Column - Map */}

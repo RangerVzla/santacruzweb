@@ -70,7 +70,7 @@ const carouselImages = [
   { src: "/santacruz/carousel-5.png", alt: "Profesionales de salud" },
   { src: "/santacruz/carousel-1a.png", alt: "Acompañando Empresas" },
   { src: "/santacruz/carousel-7.png", alt: "Profesionales de salud" },
-  { src: "/santacruz/carousel-8.jpeg", alt: "Profesionales de salud" },
+  { src: "/santacruz/carousel-8a.jpeg", alt: "Profesionales de salud" },
   { src: "/santacruz/carousel-9.jpeg", alt: "Profesionales de salud" },
 ];
 

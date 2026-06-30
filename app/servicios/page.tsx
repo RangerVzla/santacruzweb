@@ -136,7 +136,7 @@ export default function Servicios() {
                 <ul className="text-xs sm:text-sm uppercase tracking-wider text-neutral-800 text-left leading-normal space-y-3 pl-5 list-disc list-outside marker:text-brand grid grid-cols-2 gap-x-4">
                   <li>Telemedicina</li>
                   <li>Iriscopio</li>
-                  <li>Ecógrafo</li>
+                  <li>Ecógrafo portátil</li>
                   <li>Otoscopio</li>
                   <li>Cámara de inspección</li>
                   <li>Estetoscopio digital</li>
@@ -427,7 +427,7 @@ export default function Servicios() {
             </div>
             <div className="relative aspect-4/5 overflow-hidden order-1 md:order-2">
               <Image
-                src="/santacruz/servicios-5a.png"
+                src="/santacruz/servicios-5b.png"
                 alt="Cobertura global y especializada"
                 fill
                 className="object-contain"
@@ -517,7 +517,7 @@ export default function Servicios() {
               },
               {
                 label: "Medicina Offshore/Marítima",
-                image: "/santacruz/especialidades/maritima1.png",
+                image: "/santacruz/especialidades/maritima-1a.png",
               },
               {
                 label: "Laboratorio",

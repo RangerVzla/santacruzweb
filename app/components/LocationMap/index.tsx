@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -15,7 +15,10 @@ const orangeMarkerSvg = `
 `;
 
 export default function LocationMap({ locations }: LocationMapProps) {
-  const mapRef = useRef<L.Map | null>(null);
+  // Unique key per mount: forces React to create a fresh DOM container on every
+  // mount, avoiding Leaflet's "Map container is being reused by another instance"
+  // error under React Strict Mode / Fast Refresh in development.
+  const [mapKey] = useState(() => `map-${Math.random().toString(36).slice(2)}`);
 
   // Create icon inside component to avoid SSR issues with btoa
   const customIcon = useMemo(
@@ -29,16 +32,6 @@ export default function LocationMap({ locations }: LocationMapProps) {
     [],
   );
 
-  // Clean up previous map instance on unmount (fixes Strict Mode double-mount error)
-  useEffect(() => {
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
-      }
-    };
-  }, []);
-
   // Calculate center point between all locations
   const centerLat =
     locations.reduce((sum, loc) => sum + loc.coordinates[0], 0) /
@@ -49,7 +42,7 @@ export default function LocationMap({ locations }: LocationMapProps) {
 
   return (
     <MapContainer
-      ref={mapRef}
+      key={mapKey}
       center={[centerLat, centerLng]}
       zoom={9}
       scrollWheelZoom={false}

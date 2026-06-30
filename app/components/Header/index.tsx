@@ -27,9 +27,10 @@ export function Header() {
       setScrolled(window.scrollY > 60);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Check initial position
     handleScroll();
 
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
