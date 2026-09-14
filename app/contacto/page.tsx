@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { useState, FormEvent } from "react";
 import type { Location } from "../components/LocationMap/types";
+
+const JIRA_PORTAL_URL =
+  "https://santacruzoyg.atlassian.net/servicedesk/customer/portal/2/create/10017";
 
 // Dynamic import for Leaflet (requires window object)
 const LocationMap = dynamic(
@@ -17,26 +19,6 @@ const LocationMap = dynamic(
     ),
   },
 );
-
-type FormData = {
-  nombreCompleto: string;
-  empresa: string;
-  cargo: string;
-  telefono: string;
-  email: string;
-  mensaje: string;
-  consentimiento: boolean;
-};
-
-type FormErrors = {
-  nombreCompleto?: string;
-  empresa?: string;
-  cargo?: string;
-  telefono?: string;
-  email?: string;
-  mensaje?: string;
-  consentimiento?: string;
-};
 
 const clinicas = [
   {
@@ -87,76 +69,6 @@ const locations: Location[] = [
 ];
 
 export default function ContactoPage() {
-  const [formData, setFormData] = useState<FormData>({
-    nombreCompleto: "",
-    empresa: "",
-    cargo: "",
-    telefono: "",
-    email: "",
-    mensaje: "",
-    consentimiento: false,
-  });
-  const [errors, setErrors] = useState<FormErrors>({});
-
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
-
-    if (!formData.nombreCompleto.trim()) {
-      newErrors.nombreCompleto = "El nombre es requerido";
-    }
-
-    if (!formData.empresa.trim()) {
-      newErrors.empresa = "La empresa es requerida";
-    }
-
-    if (!formData.cargo.trim()) {
-      newErrors.cargo = "El cargo es requerido";
-    }
-
-    if (!formData.telefono.trim()) {
-      newErrors.telefono = "El teléfono es requerido";
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "El email es requerido";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "El email no es válido";
-    }
-
-    if (!formData.mensaje.trim()) {
-      newErrors.mensaje = "El mensaje es requerido";
-    }
-
-    if (!formData.consentimiento) {
-      newErrors.consentimiento = "Debes aceptar la política de datos";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) return;
-
-    const subject = encodeURIComponent(
-      `Contacto: ${formData.nombreCompleto} - ${formData.empresa}`,
-    );
-    const body = encodeURIComponent(
-      `Nombre: ${formData.nombreCompleto}\nEmpresa: ${formData.empresa}\nCargo: ${formData.cargo}\nTeléfono: ${formData.telefono}\nEmail: ${formData.email}\n\nMensaje:\n${formData.mensaje}`,
-    );
-
-    window.location.href = `mailto:admin@santacruzoyg.com.ar?subject=${subject}&body=${body}`;
-  };
-
-  const handleChange = (field: keyof FormData, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field as keyof FormErrors]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
-    }
-  };
-
   return (
     <main className="bg-white text-black overflow-x-hidden">
       {/* Hero */}
@@ -200,162 +112,22 @@ export default function ContactoPage() {
         </video>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-8">
-          {/* Intro text */}
-          <p className="text-center text-white/90 text-base leading-relaxed mb-12">
-            Si tienes cualquier duda o consulta acerca de nuestros servicios,
-            puedes completar el formulario a continuación y te daremos respuesta
-            lo antes posible:
-          </p>
-
-          {/* Form title */}
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white text-center uppercase tracking-[0.12em] mb-16">
-            Formulario de Contacto
-          </h2>
-
-          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-            {/* Nombre Completo */}
-            <div>
-              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
-                Nombre Completo
-              </label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="text"
-                  value={formData.nombreCompleto}
-                  onChange={(e) =>
-                    handleChange("nombreCompleto", e.target.value)
-                  }
-                  className="flex-1 bg-transparent border-b-2 border-[color:var(--brand-orange)] text-white py-2 focus:outline-none"
-                />
-                <div className="w-2 h-2 rounded-full bg-[color:var(--brand-orange)]" />
-              </div>
-              {errors.nombreCompleto && (
-                <p className="mt-1 text-sm text-red-400">
-                  {errors.nombreCompleto}
-                </p>
-              )}
-            </div>
-
-            {/* Empresa */}
-            <div>
-              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
-                Empresa
-              </label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="text"
-                  value={formData.empresa}
-                  onChange={(e) => handleChange("empresa", e.target.value)}
-                  className="flex-1 bg-transparent border-b-2 border-[color:var(--brand-orange)] text-white py-2 focus:outline-none"
-                />
-                <div className="w-2 h-2 rounded-full bg-[color:var(--brand-orange)]" />
-              </div>
-              {errors.empresa && (
-                <p className="mt-1 text-sm text-red-400">{errors.empresa}</p>
-              )}
-            </div>
-
-            {/* Cargo */}
-            <div>
-              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
-                Cargo
-              </label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="text"
-                  value={formData.cargo}
-                  onChange={(e) => handleChange("cargo", e.target.value)}
-                  className="flex-1 bg-transparent border-b-2 border-[color:var(--brand-orange)] text-white py-2 focus:outline-none"
-                />
-                <div className="w-2 h-2 rounded-full bg-[color:var(--brand-orange)]" />
-              </div>
-              {errors.cargo && (
-                <p className="mt-1 text-sm text-red-400">{errors.cargo}</p>
-              )}
-            </div>
-
-            {/* Teléfono */}
-            <div>
-              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
-                Teléfono
-              </label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="tel"
-                  value={formData.telefono}
-                  onChange={(e) => handleChange("telefono", e.target.value)}
-                  className="flex-1 bg-transparent border-b-2 border-[color:var(--brand-orange)] text-white py-2 focus:outline-none"
-                />
-                <div className="w-2 h-2 rounded-full bg-[color:var(--brand-orange)]" />
-              </div>
-              {errors.telefono && (
-                <p className="mt-1 text-sm text-red-400">{errors.telefono}</p>
-              )}
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="block text-white text-sm uppercase tracking-[0.05em] sm:tracking-widest mb-1">
-                Email
-              </label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
-                  className="flex-1 bg-transparent border-b-2 border-[color:var(--brand-orange)] text-white py-2 focus:outline-none"
-                />
-                <div className="w-2 h-2 rounded-full bg-[color:var(--brand-orange)]" />
-              </div>
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-400">{errors.email}</p>
-              )}
-            </div>
-
-            {/* Mensaje */}
-            <div>
-              <textarea
-                rows={5}
-                value={formData.mensaje}
-                onChange={(e) => handleChange("mensaje", e.target.value)}
-                placeholder="MENSAJE/CONSULTA ESPECÍFICA"
-                className="w-full bg-white text-neutral-800 p-4 rounded focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)] resize-none placeholder:text-neutral-400 placeholder:uppercase placeholder:tracking-[0.1em]"
-              />
-              {errors.mensaje && (
-                <p className="mt-1 text-sm text-red-400">{errors.mensaje}</p>
-              )}
-            </div>
-
-            {/* Consentimiento */}
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="consentimiento"
-                checked={formData.consentimiento}
-                onChange={(e) =>
-                  handleChange("consentimiento", e.target.checked)
-                }
-                className="mt-0.5 w-6 h-6 accent-brand cursor-pointer"
-              />
-              <label htmlFor="consentimiento" className="text-white/90 text-sm">
-                Doy mi consentimiento a la política de gestión de datos de
-                SantaCruzO&G
-              </label>
-            </div>
-            {errors.consentimiento && (
-              <p className="text-sm text-red-400">{errors.consentimiento}</p>
-            )}
-
-            {/* Submit */}
-            <div className="flex flex-col items-center gap-4 pt-4">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center px-8 sm:px-12 md:px-16 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium transition-colors border-2 border-white text-white hover:bg-white hover:text-black"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
+          <div className="mx-auto max-w-md rounded-2xl border border-white/20 bg-[color:var(--brand-dark)] p-8 text-center space-y-4">
+            <h3 className="text-lg font-semibold text-white">
+              ¿Tenés una queja o solicitud?
+            </h3>
+            <p className="text-sm text-white/80">
+              Contanos tu experiencia y te vamos a responder a la brevedad.
+            </p>
+            <a
+              href={JIRA_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full text-sm uppercase tracking-[0.16em] font-medium bg-brand text-white transition-colors hover:bg-[color:var(--brand-dark)]"
+            >
+              Enviar solicitud
+            </a>
+          </div>
         </div>
       </section>
 
