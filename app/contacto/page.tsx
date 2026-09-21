@@ -114,7 +114,8 @@ export default function ContactoPage() {
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-8">
           <div className="mx-auto max-w-md rounded-2xl border border-white/20 bg-[color:var(--brand-dark)] p-8 text-center space-y-4">
             <h3 className="text-lg font-semibold text-white">
-              ¿Tenés una queja o solicitud?
+              ¿Hay oportunidades de mejoras que hayas identificado en
+              nuestros servicios y quieras compartirnos?
             </h3>
             <p className="text-sm text-white/80">
               Contanos tu experiencia y te vamos a responder a la brevedad.

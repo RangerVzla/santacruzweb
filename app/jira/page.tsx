@@ -14,7 +14,8 @@ export default function JiraTestPage() {
 
         <div className="rounded-2xl border border-neutral-200 bg-[var(--brand-gray)] p-8 space-y-4">
           <h2 className="text-lg font-semibold text-[var(--brand-dark)]">
-            ¿Tenés una queja o solicitud?
+            ¿Hay oportunidades de mejoras que hayas identificado en nuestros
+            servicios y quieras compartirnos?
           </h2>
           <p className="text-sm text-neutral-600">
             Contanos tu experiencia y te vamos a responder a la brevedad.
